@@ -48,7 +48,7 @@ export function NavBar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={scrollToTop}>
-            <div className="text-2xl font-bold text-white">Carlos Freire</div>
+            <div className="text-2xl font-bold text-white">Welitvation</div>
           </Link>
 
           {/* Desktop Navigation */}

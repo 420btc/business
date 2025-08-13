@@ -87,22 +87,13 @@ export function PoweredByBadge() {
                 {/* Header with large logo */}
                 <div className="text-center space-y-4 pt-8">
                   <div className="flex justify-center">
-                    <div className="text-3xl font-bold text-white">Carlos Freire</div>
+                    <div className="text-3xl font-bold text-white">Welitvation</div>
                   </div>
                   <h2 className="text-2xl font-bold text-white">Partnership Program</h2>
                   <p className="text-gray-400">Exclusive benefits for our valued partners</p>
                 </div>
 
-                {/* Large powered by badge preview */}
-                <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
-                  <div className="text-sm text-gray-400 mb-4 text-center">How it appears on your site:</div>
-                  <div className="flex justify-center">
-                    <div className="inline-flex items-center px-3 py-2 bg-black/80 backdrop-blur-sm border border-gray-700 rounded-full text-xs text-gray-300">
-                      <span className="ml-1 mr-1">powered by</span>
-                      <span className="text-sm font-bold text-white">Carlos Freire</span>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Benefits grid */}
                 <div className="space-y-6">

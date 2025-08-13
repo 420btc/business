@@ -68,13 +68,13 @@ export function Footer() {
         {/* Desktop Footer */}
         <div className="hidden md:flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="flex items-center space-x-4">
-            <div className="text-2xl font-bold text-white">Carlos Freire</div>
+            <div className="text-2xl font-bold text-white">Welitvation</div>
             <FooterPopup />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <div className="text-muted-foreground text-xs">
-              &copy; {new Date().getFullYear()} Carlos Freire. All rights reserved.
+              &copy; {new Date().getFullYear()} Welitvation. All rights reserved.
             </div>
 
             <div className="flex items-center gap-4">
@@ -90,6 +90,15 @@ export function Footer() {
                 <span className="text-xs text-muted-foreground">Subscribe to our newsletter</span>
                 <NewsletterForm />
               </div>
+
+              <a 
+                href="https://www.carlosfr.es" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-green-500/20 text-green-400 border border-green-500/30 hover:bg-green-500/30 transition-all duration-300"
+              >
+                Web made by: Carlosfr.es
+              </a>
             </div>
           </div>
         </div>
@@ -98,11 +107,19 @@ export function Footer() {
         <div className="md:hidden space-y-6">
           {/* Logo and main info */}
           <div className="text-center space-y-4">
-            <div className="text-2xl font-bold text-white mx-auto">Carlos Freire</div>
-            <div className="text-muted-foreground text-xs">
-              &copy; {new Date().getFullYear()} Carlos Freire. All rights reserved.
+              <div className="text-2xl font-bold text-white mx-auto">Welitvation</div>
+              <div className="text-muted-foreground text-xs">
+                &copy; {new Date().getFullYear()} Welitvation. All rights reserved.
+              </div>
+              <a 
+                href="https://www.carlosfr.es" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-green-500/20 text-green-400 border border-green-500/30 hover:bg-green-500/30 transition-all duration-300"
+              >
+                Web made by: Carlosfr.es
+              </a>
             </div>
-          </div>
 
           {/* Collapsible sections */}
           <div className="space-y-2">

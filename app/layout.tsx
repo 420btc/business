@@ -9,7 +9,7 @@ import { BusinessProfileHeader } from "@/components/business-profile-header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Carlos Freire - Transform Your Business",
+  title: "Welitvation - Transform Your Business",
   description: "Revolutionary technology solutions that drive growth and innovation",
     generator: 'v0.app'
 }
