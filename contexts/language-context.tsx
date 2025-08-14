@@ -40,21 +40,7 @@ const translations = {
       "Innovative solutions at the intersection of digital technology and mechanical engineering excellence.",
     "hero.typing_text": "Let's create tomorrow's technology",
 
-    // Services Section
-    "services.title": "Services We Offer",
-    "services.subtitle": "Comprehensive solutions spanning digital innovation and mechanical excellence",
-    "services.web.title": "Web Development",
-    "services.web.description":
-      "We create everything from simple to complex websites, with flexible plans and custom solutions tailored to your needs.",
-    "services.mobile.title": "Mobile Apps",
-    "services.mobile.description": "Cross-platform mobile applications for iOS and Android",
-    "services.mechanical.title": "Mechanical Development",
-    "services.mechanical.description": "From initial concept to manufacturing-ready designs with precision engineering",
-    "services.patent.title": "Patent Services",
-    "services.patent.description": "Intellectual property protection for your innovations",
-    "services.digital.title": "Digital Systems Architecture",
-    "services.digital.description":
-      "We design and implement scalable, secure, and efficient digital infrastructure to power your business operations and innovation.",
+
 
     // Contact Section
     "contact.title": "Ready to innovate?",
@@ -72,6 +58,96 @@ const translations = {
     "process.testing": "Testing & Validation",
     "process.manufacturing": "Manufacturing Prep",
     "process.production": "Production Ready",
+
+    // Home page specific
+    "home.hero.description": "Transforming ideas into powerful digital solutions that drive growth and innovation for forward-thinking businesses.",
+    "home.contact.title": "Ready to innovate?",
+    "home.contact.description": "Let's discuss how we can transform your vision into reality with cutting-edge technology and strategic innovation.",
+    "home.steps.no_commitment": "No commitment required",
+    "home.steps.strategy_session": "30-minute strategy session",
+    "home.steps.expert_guidance": "Expert guidance",
+    "typing.technology": "technology",
+    "typing.digital_solutions": "digital solutions",
+    "typing.free_consultation": "free consultation",
+    "typing.base_text": "Let's create tomorrow's ",
+    
+    // Expertise Section
+    "expertise.trusted_by": "Trusted by industry leaders",
+    "expertise.main_title": "We help brands grow with strategic design that's thoughtful, visually bold, and built to make an impression.",
+    "expertise.fact_01": "Fact 01",
+    "expertise.fact_02": "Fact 02",
+    "expertise.fact_03": "Fact 03",
+    
+    // Services
+    "services.website.title": "Website Development",
+    "services.website.subtitle": "Modern, Fast & Scalable",
+    "services.website.description": "Transform your digital presence with cutting-edge websites that convert visitors into customers. Built with the latest technologies for maximum performance and user experience.",
+    "services.mobile.title": "Mobile App Development",
+    "services.mobile.subtitle": "Native & Cross-Platform",
+    "services.mobile.description": "Create powerful mobile experiences that engage users and drive business growth. From concept to app store, we deliver apps that users love and businesses depend on.",
+    "services.digital.title": "Digital Systems",
+    "services.digital.subtitle": "Automation & Integration",
+    "services.digital.description": "Streamline your operations with intelligent digital systems that automate workflows, integrate seamlessly, and scale with your business growth.",
+    "services.mechanical.title": "Mechanical Engineering",
+    "services.mechanical.subtitle": "Design & Prototyping",
+    "services.mechanical.description": "Bring your physical products to life with precision engineering, rapid prototyping, and manufacturing-ready designs that meet the highest industry standards.",
+    "services.product.title": "Product Development",
+    "services.product.subtitle": "From Idea to Market",
+    "services.product.description": "Transform innovative ideas into market-ready products with our comprehensive development process, from initial concept through successful launch.",
+    "services.architecture.title": "Architecture Design",
+    "services.architecture.subtitle": "Spaces That Inspire",
+    "services.architecture.description": "Create stunning architectural designs that blend functionality with aesthetics, delivering spaces that inspire and environments that enhance human experience.",
+    
+    // Services Section Header
+    "services.section.premium": "Premium Services",
+    "services.section.title": "Services That Transform",
+    "services.section.subtitle": "Comprehensive solutions designed to accelerate your business growth and digital transformation",
+    "services.section.view_projects": "View Our Projects",
+    
+    // Service Features
+    "features.lightning_fast": "Lightning-fast loading speeds",
+    "features.enterprise_security": "Enterprise-grade security",
+    "features.conversion_optimized": "Conversion-optimized design",
+    "features.uptime_guarantee": "99.9% uptime guarantee",
+    "features.cross_platform": "Cross-platform compatibility",
+    "features.real_time_sync": "Real-time synchronization",
+    "features.advanced_security": "Advanced security features",
+    "features.built_in_analytics": "Built-in analytics",
+    "features.workflow_automation": "Workflow automation",
+    "features.data_integration": "Data integration",
+    "features.cloud_native": "Cloud-native architecture",
+    "features.api_first": "API-first design",
+    "features.innovative_design": "Innovative design solutions",
+    "features.cad_modeling": "CAD modeling & simulation",
+    "features.rapid_prototyping": "Rapid prototyping",
+    "features.quality_assurance": "Quality assurance",
+    "features.market_research": "Market research & validation",
+    "features.mvp_development": "MVP development",
+    "features.go_to_market": "Go-to-market strategy",
+    "features.post_launch": "Post-launch optimization",
+    "features.sustainable_design": "Sustainable design principles",
+    "features.3d_visualization": "3D visualization & VR",
+    "features.building_compliance": "Building code compliance",
+    "features.award_winning": "Award-winning designs",
+    
+    // Service Stats
+    "stats.speed_increase": "Average Speed Increase",
+    "stats.conversion_boost": "Conversion Rate Boost",
+    "stats.client_satisfaction": "Client Satisfaction",
+    "stats.app_store_rating": "App Store Rating",
+    "stats.user_retention": "User Retention",
+    "stats.development_speed": "Development Speed",
+    "stats.efficiency_increase": "Efficiency Increase",
+    "stats.cost_reduction": "Cost Reduction",
+    "stats.error_reduction": "Error Reduction",
+    "stats.design_accuracy": "Design Accuracy",
+    "stats.time_to_prototype": "Time to Prototype",
+    "stats.manufacturing_ready": "Manufacturing Ready",
+    "stats.success_rate": "Success Rate",
+    "stats.time_to_market": "Time to Market",
+    "stats.roi_average": "ROI Average",
+    "stats.projects_completed": "Projects Completed",
+    "stats.on_time_delivery": "On-Time Delivery"
   },
   es: {
     // Navigation
@@ -98,22 +174,7 @@ const translations = {
       "Soluciones innovadoras en la intersección de la tecnología digital y la excelencia en ingeniería mecánica.",
     "hero.typing_text": "Creemos la tecnología del mañana",
 
-    // Services Section
-    "services.title": "Servicios Que Ofrecemos",
-    "services.subtitle": "Soluciones integrales que abarcan la innovación digital y la excelencia mecánica",
-    "services.web.title": "Desarrollo Web",
-    "services.web.description":
-      "Creamos desde sitios web simples hasta complejos, con planes flexibles y soluciones personalizadas adaptadas a sus necesidades.",
-    "services.mobile.title": "Aplicaciones Móviles",
-    "services.mobile.description": "Aplicaciones móviles multiplataforma para iOS y Android",
-    "services.mechanical.title": "Desarrollo Mecánico",
-    "services.mechanical.description":
-      "Desde el concepto inicial hasta diseños listos para fabricación con ingeniería de precisión",
-    "services.patent.title": "Servicios de Patentes",
-    "services.patent.description": "Protección de propiedad intelectual para sus innovaciones",
-    "services.digital.title": "Arquitectura de Sistemas Digitales",
-    "services.digital.description":
-      "Diseñamos e implementamos infraestructura digital escalable, segura y eficiente para impulsar sus operaciones comerciales e innovación.",
+
 
     // Contact Section
     "contact.title": "¿Listo para innovar?",
@@ -131,6 +192,96 @@ const translations = {
     "process.testing": "Pruebas y Validación",
     "process.manufacturing": "Preparación de Fabricación",
     "process.production": "Listo para Producción",
+
+    // Home page specific
+    "home.hero.description": "Transformando ideas en soluciones digitales poderosas que impulsan el crecimiento y la innovación para empresas visionarias.",
+    "home.contact.title": "¿Listo para innovar?",
+    "home.contact.description": "Hablemos sobre cómo podemos transformar tu visión en realidad con tecnología de vanguardia e innovación estratégica.",
+    "home.steps.no_commitment": "Sin compromiso requerido",
+    "home.steps.strategy_session": "Sesión de estrategia de 30 minutos",
+    "home.steps.expert_guidance": "Orientación experta",
+    "typing.technology": "tecnología",
+    "typing.digital_solutions": "soluciones digitales",
+    "typing.free_consultation": "consulta gratuita",
+    "typing.base_text": "Creemos la ",
+    
+    // Expertise Section
+    "expertise.trusted_by": "Confiado por líderes de la industria",
+    "expertise.main_title": "Ayudamos a las marcas a crecer con diseño estratégico que es reflexivo, visualmente audaz y construido para causar una impresión.",
+    "expertise.fact_01": "Dato 01",
+    "expertise.fact_02": "Dato 02",
+    "expertise.fact_03": "Dato 03",
+    
+    // Services
+    "services.website.title": "Desarrollo Web",
+    "services.website.subtitle": "Moderno, Rápido y Escalable",
+    "services.website.description": "Transforma tu presencia digital con sitios web de vanguardia que convierten visitantes en clientes. Construidos con las últimas tecnologías para máximo rendimiento y experiencia de usuario.",
+    "services.mobile.title": "Desarrollo de Apps Móviles",
+    "services.mobile.subtitle": "Nativo y Multiplataforma",
+    "services.mobile.description": "Crea experiencias móviles poderosas que involucran a los usuarios e impulsan el crecimiento empresarial. Desde el concepto hasta la tienda de aplicaciones, entregamos apps que los usuarios aman y las empresas necesitan.",
+    "services.digital.title": "Sistemas Digitales",
+    "services.digital.subtitle": "Automatización e Integración",
+    "services.digital.description": "Optimiza tus operaciones con sistemas digitales inteligentes que automatizan flujos de trabajo, se integran perfectamente y escalan con el crecimiento de tu negocio.",
+    "services.mechanical.title": "Ingeniería Mecánica",
+    "services.mechanical.subtitle": "Diseño y Prototipado",
+    "services.mechanical.description": "Da vida a tus productos físicos con ingeniería de precisión, prototipado rápido y diseños listos para fabricación que cumplen los más altos estándares de la industria.",
+    "services.product.title": "Desarrollo de Productos",
+    "services.product.subtitle": "De la Idea al Mercado",
+    "services.product.description": "Transforma ideas innovadoras en productos listos para el mercado con nuestro proceso de desarrollo integral, desde el concepto inicial hasta el lanzamiento exitoso.",
+    "services.architecture.title": "Diseño Arquitectónico",
+    "services.architecture.subtitle": "Espacios que Inspiran",
+    "services.architecture.description": "Crea diseños arquitectónicos impresionantes que combinan funcionalidad con estética, entregando espacios que inspiran y ambientes que mejoran la experiencia humana.",
+    
+    // Services Section Header
+    "services.section.premium": "Servicios Premium",
+    "services.section.title": "Servicios Que Transforman",
+    "services.section.subtitle": "Soluciones integrales diseñadas para acelerar el crecimiento de tu negocio y la transformación digital",
+    "services.section.view_projects": "Ver Nuestros Proyectos",
+    
+    // Service Features
+    "features.lightning_fast": "Velocidades de carga ultrarrápidas",
+    "features.enterprise_security": "Seguridad de nivel empresarial",
+    "features.conversion_optimized": "Diseño optimizado para conversiones",
+    "features.uptime_guarantee": "Garantía de disponibilidad del 99.9%",
+    "features.cross_platform": "Compatibilidad multiplataforma",
+    "features.real_time_sync": "Sincronización en tiempo real",
+    "features.advanced_security": "Características de seguridad avanzadas",
+    "features.built_in_analytics": "Analíticas integradas",
+    "features.workflow_automation": "Automatización de flujos de trabajo",
+    "features.data_integration": "Integración de datos",
+    "features.cloud_native": "Arquitectura nativa en la nube",
+    "features.api_first": "Diseño API-first",
+    "features.innovative_design": "Soluciones de diseño innovadoras",
+    "features.cad_modeling": "Modelado CAD y simulación",
+    "features.rapid_prototyping": "Prototipado rápido",
+    "features.quality_assurance": "Aseguramiento de calidad",
+    "features.market_research": "Investigación y validación de mercado",
+    "features.mvp_development": "Desarrollo de MVP",
+    "features.go_to_market": "Estrategia de lanzamiento al mercado",
+    "features.post_launch": "Optimización post-lanzamiento",
+    "features.sustainable_design": "Principios de diseño sostenible",
+    "features.3d_visualization": "Visualización 3D y VR",
+    "features.building_compliance": "Cumplimiento de códigos de construcción",
+    "features.award_winning": "Diseños galardonados",
+    
+    // Service Stats
+    "stats.speed_increase": "Aumento Promedio de Velocidad",
+    "stats.conversion_boost": "Impulso en Tasa de Conversión",
+    "stats.client_satisfaction": "Satisfacción del Cliente",
+    "stats.app_store_rating": "Calificación en App Store",
+    "stats.user_retention": "Retención de Usuarios",
+    "stats.development_speed": "Velocidad de Desarrollo",
+    "stats.efficiency_increase": "Aumento de Eficiencia",
+    "stats.cost_reduction": "Reducción de Costos",
+    "stats.error_reduction": "Reducción de Errores",
+    "stats.design_accuracy": "Precisión de Diseño",
+    "stats.time_to_prototype": "Tiempo hasta Prototipo",
+    "stats.manufacturing_ready": "Listo para Fabricación",
+    "stats.success_rate": "Tasa de Éxito",
+    "stats.time_to_market": "Tiempo al Mercado",
+    "stats.roi_average": "ROI Promedio",
+    "stats.projects_completed": "Proyectos Completados",
+    "stats.on_time_delivery": "Entrega a Tiempo"
   },
   fr: {
     // Navigation
@@ -157,22 +308,7 @@ const translations = {
       "Solutions innovantes à l'intersection de la technologie numérique et de l'excellence en ingénierie mécanique.",
     "hero.typing_text": "Créons la technologie de demain",
 
-    // Services Section
-    "services.title": "Services Que Nous Offrons",
-    "services.subtitle": "Solutions complètes couvrant l'innovation numérique et l'excellence mécanique",
-    "services.web.title": "Développement Web",
-    "services.web.description":
-      "Nous créons tout, des sites web simples aux complexes, avec des plans flexibles et des solutions personnalisées adaptées à vos besoins.",
-    "services.mobile.title": "Applications Mobiles",
-    "services.mobile.description": "Applications mobiles multiplateformes pour iOS et Android",
-    "services.mechanical.title": "Développement Mécanique",
-    "services.mechanical.description":
-      "Du concept initial aux conceptions prêtes pour la fabrication avec une ingénierie de précision",
-    "services.patent.title": "Services de Brevets",
-    "services.patent.description": "Protection de la propriété intellectuelle pour vos innovations",
-    "services.digital.title": "Architecture des Systèmes Numériques",
-    "services.digital.description":
-      "Nous concevons et mettons en œuvre une infrastructure numérique évolutive, sécurisée et efficace pour alimenter vos opérations commerciales et votre innovation.",
+
 
     // Contact Section
     "contact.title": "Prêt à innover?",
@@ -216,21 +352,7 @@ const translations = {
       "Innovative Lösungen an der Schnittstelle von digitaler Technologie und maschinenbaulicher Exzellenz.",
     "hero.typing_text": "Lassen Sie uns die Technologie von morgen schaffen",
 
-    // Services Section
-    "services.title": "Unsere Dienstleistungen",
-    "services.subtitle": "Umfassende Lösungen, die digitale Innovation und mechanische Exzellenz umfassen",
-    "services.web.title": "Webentwicklung",
-    "services.web.description":
-      "Wir erstellen alles von einfachen bis hin zu komplexen Websites mit flexiblen Plänen und maßgeschneiderten Lösungen für Ihre Bedürfnisse.",
-    "services.mobile.title": "Mobile Apps",
-    "services.mobile.description": "Plattformübergreifende mobile Anwendungen für iOS und Android",
-    "services.mechanical.title": "Mechanische Entwicklung",
-    "services.mechanical.description": "Vom ersten Konzept bis hin zu fertigungsreifen Designs mit Präzisionstechnik",
-    "services.patent.title": "Patent-Dienstleistungen",
-    "services.patent.description": "Schutz des geistigen Eigentums für Ihre Innovationen",
-    "services.digital.title": "Digitale Systemarchitektur",
-    "services.digital.description":
-      "Wir entwerfen und implementieren skalierbare, sichere und effiziente digitale Infrastruktur, um Ihre Geschäftsabläufe und Innovation zu unterstützen.",
+
 
     // Contact Section
     "contact.title": "Bereit zu innovieren?",
@@ -273,19 +395,7 @@ const translations = {
     "hero.description": "在数字技术和机械工程卓越的交汇点提供创新解决方案。",
     "hero.typing_text": "让我们创造明天的技术",
 
-    // Services Section
-    "services.title": "我们提供的服务",
-    "services.subtitle": "涵盖数字创新和机械卓越的综合解决方案",
-    "services.web.title": "网站开发",
-    "services.web.description": "我们创建从简单到复杂的网站，提供灵活的计划和量身定制的解决方案以满足您的需求。",
-    "services.mobile.title": "移动应用",
-    "services.mobile.description": "iOS和Android跨平台移动应用程序",
-    "services.mechanical.title": "机械开发",
-    "services.mechanical.description": "从初始概念到精密工程的制造就绪设计",
-    "services.patent.title": "专利服务",
-    "services.patent.description": "为您的创新提供知识产权保护",
-    "services.digital.title": "数字系统架构",
-    "services.digital.description": "我们设计和实施可扩展、安全、高效的数字基础设施，为您的业务运营和创新提供动力。",
+
 
     // Contact Section
     "contact.title": "准备创新了吗？",
@@ -327,21 +437,7 @@ const translations = {
     "hero.description": "デジタル技術と機械工学の卓越性の交差点での革新的なソリューション。",
     "hero.typing_text": "明日のテクノロジーを創造しましょう",
 
-    // Services Section
-    "services.title": "私たちのサービス",
-    "services.subtitle": "デジタル革新と機械的卓越性を包含する包括的なソリューション",
-    "services.web.title": "ウェブ開発",
-    "services.web.description":
-      "シンプルから複雑なウェブサイトまで、お客様のニーズに合わせた柔軟なプランとカスタムソリューションを作成します。",
-    "services.mobile.title": "モバイルアプリ",
-    "services.mobile.description": "iOSとAndroid向けのクロスプラットフォームモバイルアプリケーション",
-    "services.mechanical.title": "機械開発",
-    "services.mechanical.description": "初期コンセプトから精密工学による製造準備完了設計まで",
-    "services.patent.title": "特許サービス",
-    "services.patent.description": "あなたの革新のための知的財産保護",
-    "services.digital.title": "デジタルシステムアーキテクチャ",
-    "services.digital.description":
-      "ビジネス運営とイノベーションを支援するスケーラブルで安全かつ効率的なデジタルインフラストラクチャを設計・実装します。",
+
 
     // Contact Section
     "contact.title": "革新の準備はできましたか？",

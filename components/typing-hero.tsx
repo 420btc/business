@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import { useLanguage } from "@/contexts/language-context"
 
 export function TypingHero() {
+  const { t, currentLanguage } = useLanguage()
   const [displayText, setDisplayText] = useState("")
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
   const [currentCharIndex, setCurrentCharIndex] = useState(0)
@@ -11,15 +13,23 @@ export function TypingHero() {
   const [showCursor, setShowCursor] = useState(true)
 
   const phrases = [
-    { text: "technology", color: "text-emerald-400", cursorColor: "bg-emerald-400" },
-    { text: "digital solutions", color: "text-blue-400", cursorColor: "bg-blue-400" },
-    { text: "free consultation", color: "text-orange-400", cursorColor: "bg-orange-400" },
+    { text: t("typing.technology"), color: "text-emerald-400", cursorColor: "bg-emerald-400" },
+    { text: t("typing.digital_solutions"), color: "text-blue-400", cursorColor: "bg-blue-400" },
+    { text: t("typing.free_consultation"), color: "text-orange-400", cursorColor: "bg-orange-400" },
   ]
 
-  const baseText = "Let's create tomorrow's "
+  const baseText = t("typing.base_text")
   const typingSpeed = 100
   const deletingSpeed = 50
   const pauseTime = 2000
+
+  // Reset animation when language changes
+  useEffect(() => {
+    setDisplayText("")
+    setCurrentCharIndex(0)
+    setCurrentPhraseIndex(0)
+    setIsDeleting(false)
+  }, [currentLanguage])
 
   useEffect(() => {
     const currentPhrase = phrases[currentPhraseIndex].text

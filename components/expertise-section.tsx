@@ -1,12 +1,11 @@
 "use client"
 
 import type React from "react"
-
 import type { ReactElement } from "react"
 import { DashboardChart } from "@/components/dashboard-chart"
-
 import { useRef, useEffect, useState } from "react"
 import { motion, useInView } from "framer-motion"
+import { useLanguage } from "@/contexts/language-context"
 import {
   ArrowUpRight,
   ChevronRight,
@@ -28,6 +27,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 
 export function ExpertiseSection(): ReactElement {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
   const zeroOneRef = useRef(null)
@@ -110,15 +110,14 @@ export function ExpertiseSection(): ReactElement {
                     99+
                   </motion.div>
                 </div>
-                <p className="text-primary text-sm">Trusted by industry leaders</p>
+                <p className="text-primary text-sm">{t("expertise.trusted_by")}</p>
                 <div className="flex text-primary">
                   <span>★★★★★</span>
                 </div>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-bold leading-tight text-white">
-                We help brands grow with strategic design that's thoughtful, visually bold, and built to make an
-                impression.
+                {t("expertise.main_title")}
               </h3>
             </motion.div>
           </div>
@@ -139,7 +138,7 @@ export function ExpertiseSection(): ReactElement {
 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
-                    <p className="text-sm text-muted-foreground">Fact 01</p>
+                    <p className="text-sm text-muted-foreground">{t("expertise.fact_01")}</p>
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}

@@ -12,8 +12,11 @@ import { motion } from "framer-motion"
 import { Zap } from "lucide-react"
 import { ProfileDropdown } from "@/components/profile-dropdown"
 import { ServicesViewportSection } from "@/components/services-viewport-section"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Home() {
+  const { t } = useLanguage()
+
   return (
     <main className="relative min-h-screen bg-black text-foreground overflow-x-hidden">
       {/* Background layers */}
@@ -69,8 +72,7 @@ export default function Home() {
             {/* Enhanced description with better contrast */}
             <div className="relative">
               <p className="relative z-10 text-gray-300 max-w-xl mx-auto font-medium">
-                Transforming ideas into powerful digital solutions that drive growth and innovation for forward-thinking
-                businesses.
+                {t("home.hero.description")}
               </p>
             </div>
 
@@ -82,7 +84,7 @@ export default function Home() {
                   className="group relative px-6 py-3 bg-gray-800 text-white rounded-lg font-medium text-base hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700"
                 >
                   <span className="flex items-center space-x-2">
-                    <span>Services</span>
+                    <span>{t("nav.services")}</span>
                   </span>
                 </Link>
 
@@ -92,7 +94,7 @@ export default function Home() {
                 >
                   <span className="flex items-center space-x-2">
                     <Zap className="w-5 h-5" />
-                    <span>Support</span>
+                    <span>{t("nav.support")}</span>
                   </span>
                 </Link>
               </div>
@@ -116,9 +118,8 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-white">Ready to </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-green-600">
-                  innovate?
+                  {t("home.contact.title")}
                 </span>
               </motion.h2>
               <motion.div
@@ -133,8 +134,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Let's discuss how we can transform your vision into reality with cutting-edge technology and strategic
-                innovation.
+                {t("home.contact.description")}
               </motion.p>
             </div>
 
@@ -151,7 +151,7 @@ export default function Home() {
                     className="group relative px-6 py-3 bg-gray-800 text-white rounded-lg font-medium text-base hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700"
                   >
                     <span className="flex items-center space-x-2">
-                      <span>Services</span>
+                      <span>{t("nav.services")}</span>
                     </span>
                   </Link>
 
@@ -161,7 +161,7 @@ export default function Home() {
                   >
                     <span className="flex items-center space-x-2">
                       <Zap className="w-5 h-5" />
-                      <span>Free Consultation</span>
+                      <span>{t("cta.consultation")}</span>
                     </span>
                   </Link>
 
@@ -171,7 +171,7 @@ export default function Home() {
                   >
                     <span className="flex items-center space-x-2">
                       <Zap className="w-5 h-5" />
-                      <span>Support</span>
+                      <span>{t("nav.support")}</span>
                     </span>
                   </Link>
                 </div>
@@ -181,19 +181,19 @@ export default function Home() {
                     <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
                       <span className="text-primary font-bold text-sm">1</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">No commitment required</p>
+                    <p className="text-sm text-muted-foreground">{t("home.steps.no_commitment")}</p>
                   </div>
                   <div className="flex flex-col items-center space-y-2">
                     <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
                       <span className="text-primary font-bold text-sm">2</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">30-minute strategy session</p>
+                    <p className="text-sm text-muted-foreground">{t("home.steps.strategy_session")}</p>
                   </div>
                   <div className="flex flex-col items-center space-y-2">
                     <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
                       <span className="text-primary font-bold text-sm">3</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">Expert guidance</p>
+                    <p className="text-sm text-muted-foreground">{t("home.steps.expert_guidance")}</p>
                   </div>
                 </div>
               </div>

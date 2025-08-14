@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
+import { useLanguage } from "@/contexts/language-context"
 import {
   Globe,
   Smartphone,
@@ -173,10 +174,148 @@ const services = [
 ]
 
 export function ServicesViewportSection() {
+  const { t } = useLanguage()
   const [activeService, setActiveService] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([])
   const router = useRouter()
+
+  const getServices = () => [
+    {
+      id: "website",
+      title: t("services.website.title"),
+      subtitle: t("services.website.subtitle"),
+      description: t("services.website.description"),
+      icon: <Globe className="w-8 h-8" />,
+      features: [
+        { icon: <Rocket className="w-5 h-5" />, text: "Lightning-fast loading speeds" },
+        { icon: <Shield className="w-5 h-5" />, text: "Enterprise-grade security" },
+        { icon: <Target className="w-5 h-5" />, text: "Conversion-optimized design" },
+        { icon: <Gauge className="w-5 h-5" />, text: "99.9% uptime guarantee" },
+      ],
+      stats: [
+        { label: "Average Speed Increase", value: "340%" },
+        { label: "Conversion Rate Boost", value: "127%" },
+        { label: "Client Satisfaction", value: "98%" },
+      ],
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+      gradient: "from-blue-500 via-cyan-400 to-blue-600",
+      bgGradient: "from-blue-500/20 via-cyan-400/10 to-blue-600/20",
+      accentColor: "text-blue-400",
+    },
+    {
+      id: "mobile",
+      title: t("services.mobile.title"),
+      subtitle: t("services.mobile.subtitle"),
+      description: t("services.mobile.description"),
+      icon: <Smartphone className="w-8 h-8" />,
+      features: [
+        { icon: <Users className="w-5 h-5" />, text: "Cross-platform compatibility" },
+        { icon: <Zap className="w-5 h-5" />, text: "Real-time synchronization" },
+        { icon: <Lock className="w-5 h-5" />, text: "Advanced security features" },
+        { icon: <BarChart className="w-5 h-5" />, text: "Built-in analytics" },
+      ],
+      stats: [
+        { label: "App Store Rating", value: "4.8★" },
+        { label: "User Retention", value: "85%" },
+        { label: "Development Speed", value: "2x Faster" },
+      ],
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
+      gradient: "from-purple-500 via-pink-400 to-purple-600",
+      bgGradient: "from-purple-500/20 via-pink-400/10 to-purple-600/20",
+      accentColor: "text-purple-400",
+    },
+    {
+      id: "digital",
+      title: t("services.digital.title"),
+      subtitle: t("services.digital.subtitle"),
+      description: t("services.digital.description"),
+      icon: <Laptop className="w-8 h-8" />,
+      features: [
+        { icon: <Cog className="w-5 h-5" />, text: "Workflow automation" },
+        { icon: <Database className="w-5 h-5" />, text: "Data integration" },
+        { icon: <Cloud className="w-5 h-5" />, text: "Cloud-native architecture" },
+        { icon: <Layers className="w-5 h-5" />, text: "API-first design" },
+      ],
+      stats: [
+        { label: "Efficiency Increase", value: "250%" },
+        { label: "Cost Reduction", value: "60%" },
+        { label: "Error Reduction", value: "95%" },
+      ],
+      technologies: ["Node.js", "Python", "AWS", "Docker", "Kubernetes"],
+      gradient: "from-emerald-500 via-teal-400 to-emerald-600",
+      bgGradient: "from-emerald-500/20 via-teal-400/10 to-emerald-600/20",
+      accentColor: "text-emerald-400",
+    },
+    {
+      id: "mechanical",
+      title: t("services.mechanical.title"),
+      subtitle: t("services.mechanical.subtitle"),
+      description: t("services.mechanical.description"),
+      icon: <Cog className="w-8 h-8" />,
+      features: [
+        { icon: <Lightbulb className="w-5 h-5" />, text: "Innovative design solutions" },
+        { icon: <Code className="w-5 h-5" />, text: "CAD modeling & simulation" },
+        { icon: <Package className="w-5 h-5" />, text: "Rapid prototyping" },
+        { icon: <Award className="w-5 h-5" />, text: "Quality assurance" },
+      ],
+      stats: [
+        { label: "Design Accuracy", value: "99.7%" },
+        { label: "Time to Prototype", value: "72hrs" },
+        { label: "Manufacturing Ready", value: "100%" },
+      ],
+      technologies: ["SolidWorks", "AutoCAD", "ANSYS", "3D Printing", "CNC"],
+      gradient: "from-orange-500 via-red-400 to-orange-600",
+      bgGradient: "from-orange-500/20 via-red-400/10 to-orange-600/20",
+      accentColor: "text-orange-400",
+    },
+    {
+      id: "product",
+      title: t("services.product.title"),
+      subtitle: t("services.product.subtitle"),
+      description: t("services.product.description"),
+      icon: <Package className="w-8 h-8" />,
+      features: [
+        { icon: <Target className="w-5 h-5" />, text: "Market research & validation" },
+        { icon: <Rocket className="w-5 h-5" />, text: "MVP development" },
+        { icon: <TrendingUp className="w-5 h-5" />, text: "Go-to-market strategy" },
+        { icon: <Star className="w-5 h-5" />, text: "Post-launch optimization" },
+      ],
+      stats: [
+        { label: "Success Rate", value: "92%" },
+        { label: "Time to Market", value: "40% Faster" },
+        { label: "ROI Average", value: "3.2x" },
+      ],
+      technologies: ["Lean Startup", "Agile", "Design Thinking", "Analytics", "A/B Testing"],
+      gradient: "from-indigo-500 via-purple-400 to-indigo-600",
+      bgGradient: "from-indigo-500/20 via-purple-400/10 to-indigo-600/20",
+      accentColor: "text-indigo-400",
+    },
+    {
+      id: "architecture",
+      title: t("services.architecture.title"),
+      subtitle: t("services.architecture.subtitle"),
+      description: t("services.architecture.description"),
+      icon: <Building2 className="w-8 h-8" />,
+      features: [
+        { icon: <Lightbulb className="w-5 h-5" />, text: "Sustainable design principles" },
+        { icon: <Layers className="w-5 h-5" />, text: "3D visualization & VR" },
+        { icon: <Shield className="w-5 h-5" />, text: "Building code compliance" },
+        { icon: <Award className="w-5 h-5" />, text: "Award-winning designs" },
+      ],
+      stats: [
+        { label: "Projects Completed", value: "150+" },
+        { label: "Client Satisfaction", value: "96%" },
+        { label: "On-Time Delivery", value: "98%" },
+      ],
+      technologies: ["AutoCAD", "Revit", "SketchUp", "3ds Max", "Lumion"],
+      gradient: "from-pink-500 via-rose-400 to-pink-600",
+      bgGradient: "from-pink-500/20 via-rose-400/10 to-pink-600/20",
+      accentColor: "text-pink-400",
+    },
+  ]
+
+  const services = getServices()
 
   // Intersection observer for section visibility
   useEffect(() => {
@@ -279,16 +418,15 @@ export function ServicesViewportSection() {
             transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
           >
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-gray-300">Premium Services</span>
+            <span className="text-sm font-medium text-gray-300">{t("services.section.premium")}</span>
           </motion.div>
 
           <h2 className="text-5xl sm:text-6xl font-black mb-6 leading-tight">
-            <span className="text-white">Services That </span>
-            <span className="text-white font-light italic">Transform</span>
+            <span className="text-white">{t("services.section.title")}</span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive solutions designed to accelerate your business growth and digital transformation
+            {t("services.section.subtitle")}
           </p>
         </motion.div>
 
@@ -298,7 +436,7 @@ export function ServicesViewportSection() {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                ref={(el) => (serviceRefs.current[index] = el)}
+                ref={(el) => { serviceRefs.current[index] = el }}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
