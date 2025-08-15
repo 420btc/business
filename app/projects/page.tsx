@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
+import { useLanguage } from "@/contexts/language-context"
 import {
   Search,
   DollarSign,
@@ -24,6 +25,7 @@ import {
 import { Button } from "@/components/ui/button"
 
 export default function ProjectsPage() {
+  const { t } = useLanguage()
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedFilter, setSelectedFilter] = useState("all")
   const [selectedProject, setSelectedProject] = useState<any>(null)
@@ -31,10 +33,10 @@ export default function ProjectsPage() {
   const [projectLikes, setProjectLikes] = useState<{ [key: string]: { liked: boolean; disliked: boolean } }>({})
 
   const filters = [
-    { id: "all", label: "All Projects", count: 9 },
-    { id: "web", label: "Web Development", count: 6 },
-    { id: "mobile", label: "Mobile Apps", count: 1 },
-    { id: "product", label: "Physical Products", count: 2 },
+    { id: "all", label: t("projects.all_projects"), count: 9 },
+    { id: "web", label: t("projects.web_development"), count: 6 },
+    { id: "mobile", label: t("projects.mobile_apps"), count: 1 },
+    { id: "product", label: t("projects.physical_products"), count: 2 },
   ]
 
   const projects = [
@@ -438,10 +440,10 @@ export default function ProjectsPage() {
           <div className="p-4">
             {/* Header */}
             <div className="mb-6">
-              <h1 className="text-3xl font-bold mb-3 text-white">Projects</h1>
-              <p className="text-sm text-gray-400">
-                Explore our comprehensive portfolio of successful client projects.
-              </p>
+              <h1 className="text-3xl font-bold mb-3 text-white">{t("projects.title")}</h1>
+                <p className="text-sm text-gray-400">
+                  {t("projects.subtitle")}
+                </p>
             </div>
 
             {/* Search */}
@@ -494,7 +496,7 @@ export default function ProjectsPage() {
                               project.status,
                             )}`}
                           >
-                            {project.status === "in-progress" ? "In Progress" : "Completed"}
+                            {project.status === "in-progress" ? t("projects.in_progress") : t("projects.completed_status")}
                           </span>
                           <span className="text-xs text-green-400 font-semibold">{project.metrics.revenue}</span>
                         </div>
@@ -559,11 +561,11 @@ export default function ProjectsPage() {
                       </div>
                       <div className="bg-gray-950 border border-gray-800 rounded-lg p-2 text-center">
                         <div className="text-sm font-bold text-blue-400">{project.metrics.users}</div>
-                        <div className="text-xs text-gray-400">Users</div>
+                        <div className="text-xs text-gray-400">{t("projects.users")}</div>
                       </div>
                       <div className="bg-gray-950 border border-gray-800 rounded-lg p-2 text-center">
                         <div className="text-sm font-bold text-purple-400">{project.metrics.satisfaction}</div>
-                        <div className="text-xs text-gray-400">Satisfaction</div>
+                        <div className="text-xs text-gray-400">{t("projects.satisfaction")}</div>
                       </div>
                     </div>
 
@@ -576,7 +578,7 @@ export default function ProjectsPage() {
                           className="flex-1 bg-primary/20 text-primary hover:bg-primary/30"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
-                          Visit Site
+                          {t("projects.visit_site")}
                         </Button>
                       ) : (
                         <Button disabled size="sm" variant="outline" className="flex-1 border-gray-600 text-gray-500">
@@ -619,9 +621,9 @@ export default function ProjectsPage() {
             <div className="p-4">
               {/* Header */}
               <div className="mb-6">
-                <h1 className="text-2xl font-bold mb-3 text-white">Projects</h1>
+                <h1 className="text-2xl font-bold mb-3 text-white">{t("projects.title")}</h1>
                 <p className="text-sm text-gray-400">
-                  Explore our comprehensive portfolio of successful client projects.
+                  {t("projects.subtitle")}
                 </p>
               </div>
 
@@ -634,7 +636,7 @@ export default function ProjectsPage() {
                     </div>
                     <div>
                       <p className="text-lg font-bold text-white">$12M+</p>
-                      <p className="text-xs text-gray-400">Revenue</p>
+                      <p className="text-xs text-gray-400">{t("projects.revenue")}</p>
                     </div>
                   </div>
                 </div>
@@ -645,7 +647,7 @@ export default function ProjectsPage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input
                   type="text"
-                  placeholder="Search projects..."
+                  placeholder={t("projects.search_placeholder")}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-gray-950 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 text-sm"
@@ -693,7 +695,7 @@ export default function ProjectsPage() {
                             <h3 className="font-semibold text-white truncate text-sm">{project.name}</h3>
                             {project.featured && (
                               <span className="px-1 py-0.5 bg-primary text-black rounded text-xs font-medium">
-                                Featured
+                                {t("projects.featured")}
                               </span>
                             )}
                           </div>
@@ -742,7 +744,7 @@ export default function ProjectsPage() {
                               selectedProject.status,
                             )}`}
                           >
-                            {selectedProject.status === "in-progress" ? "In Progress" : "Completed"}
+                            {selectedProject.status === "in-progress" ? t("projects.in_progress") : t("projects.completed_status")}
                           </span>
                           <span className="text-sm text-gray-400">{selectedProject.timeline}</span>
                           <span className="text-sm text-green-400 font-semibold">
@@ -779,7 +781,7 @@ export default function ProjectsPage() {
                           className="border-gray-600 text-gray-500 cursor-not-allowed"
                         >
                           <Shield className="w-4 h-4 mr-2" />
-                          Private Project
+                          {t("projects.private_project")}
                         </Button>
                       )}
                     </div>
@@ -793,13 +795,13 @@ export default function ProjectsPage() {
                     <div className="p-6 space-y-8">
                       {/* Overview */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Overview</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.overview")}</h3>
                         <p className="text-gray-300 leading-relaxed">{selectedProject.details.overview}</p>
                       </div>
 
                       {/* Key Features */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.key_features")}</h3>
                         <div className="space-y-3">
                           {selectedProject.details.features.map((feature: string, index: number) => (
                             <div key={index} className="flex items-center text-gray-300">
@@ -812,7 +814,7 @@ export default function ProjectsPage() {
 
                       {/* Technologies */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Technologies</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.technologies")}</h3>
                         <div className="flex flex-wrap gap-2">
                           {selectedProject.details.technologies.map((tech: string, index: number) => (
                             <span
@@ -827,7 +829,7 @@ export default function ProjectsPage() {
 
                       {/* Team */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Team</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.team")}</h3>
                         <div className="space-y-2">
                           {selectedProject.details.team.map((member: string, index: number) => (
                             <div key={index} className="flex items-center text-gray-300">
@@ -840,7 +842,7 @@ export default function ProjectsPage() {
 
                       {/* Milestones */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Project Milestones</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.project_milestones")}</h3>
                         <div className="space-y-3">
                           {selectedProject.details.milestones.map((milestone: any, index: number) => (
                             <div key={index} className="flex items-center justify-between">
@@ -860,23 +862,23 @@ export default function ProjectsPage() {
 
                       {/* Metrics */}
                       <div>
-                        <h3 className="text-xl font-semibold text-white mb-4">Project Metrics</h3>
+                        <h3 className="text-xl font-semibold text-white mb-4">{t("projects.project_metrics")}</h3>
                         <div className="grid grid-cols-1 gap-4">
                           <div className="bg-gray-950 border border-gray-800 rounded-lg p-4">
                             <div className="flex items-center justify-between">
-                              <span className="text-gray-400">Revenue Generated</span>
+                              <span className="text-gray-400">{t("projects.revenue_generated")}</span>
                               <span className="text-green-400 font-semibold">{selectedProject.metrics.revenue}</span>
                             </div>
                           </div>
                           <div className="bg-gray-950 border border-gray-800 rounded-lg p-4">
                             <div className="flex items-center justify-between">
-                              <span className="text-gray-400">Active Users</span>
+                              <span className="text-gray-400">{t("projects.active_users")}</span>
                               <span className="text-blue-400 font-semibold">{selectedProject.metrics.users}</span>
                             </div>
                           </div>
                           <div className="bg-gray-950 border border-gray-800 rounded-lg p-4">
                             <div className="flex items-center justify-between">
-                              <span className="text-gray-400">Satisfaction</span>
+                              <span className="text-gray-400">{t("projects.satisfaction")}</span>
                               <span className="text-purple-400 font-semibold">
                                 {selectedProject.metrics.satisfaction}
                               </span>
@@ -927,10 +929,10 @@ export default function ProjectsPage() {
                       <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white">
                         <div className="text-center">
                           <Shield className="w-24 h-24 text-gray-400 mx-auto mb-6" />
-                          <h3 className="text-2xl font-semibold text-white mb-4">Private Project</h3>
+                          <h3 className="text-2xl font-semibold text-white mb-4">{t("projects.private_project")}</h3>
                           <p className="text-gray-400 max-w-md">
-                            This project contains confidential client information and cannot be previewed publicly.
-                          </p>
+                              {t("projects.private_project_description")}
+                            </p>
                         </div>
                       </div>
                     )}

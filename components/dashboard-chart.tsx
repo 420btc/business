@@ -2,9 +2,11 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
+import { useLanguage } from "@/contexts/language-context"
 import { TrendingUp, DollarSign, Users, Award, Building, Zap, Target, ArrowUpRight } from "lucide-react"
 
 export function DashboardChart() {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
   const [activeMetric, setActiveMetric] = useState(0)
@@ -12,40 +14,40 @@ export function DashboardChart() {
   // Success metrics that rotate
   const metrics = [
     {
-      title: "Revenue Generated",
+      title: t("dashboard.revenue_generated"),
       value: "$8.4M",
       change: "+340%",
       icon: <DollarSign className="w-6 h-6" />,
       color: "#10b981",
-      description: "Total revenue generated for our clients",
-      details: "Across 47 successful projects",
+      description: t("dashboard.total_revenue_description"),
+      details: t("dashboard.projects_details"),
     },
     {
-      title: "Client Growth",
+      title: t("dashboard.client_growth"),
       value: "2,847%",
       change: "+2,847%",
       icon: <TrendingUp className="w-6 h-6" />,
       color: "#3b82f6",
-      description: "Average business growth achieved",
-      details: "Within first 12 months",
+      description: t("dashboard.average_growth_description"),
+      details: t("dashboard.within_12_months"),
     },
     {
-      title: "Active Users",
+      title: t("dashboard.active_users"),
       value: "1.2M+",
       change: "+156%",
       icon: <Users className="w-6 h-6" />,
       color: "#8b5cf6",
-      description: "Users on platforms we've built",
-      details: "Across all client applications",
+      description: t("dashboard.users_platforms_description"),
+      details: t("dashboard.across_applications"),
     },
     {
-      title: "Success Rate",
+      title: t("dashboard.success_rate"),
       value: "98.7%",
       change: "+98.7%",
       icon: <Award className="w-6 h-6" />,
       color: "#f59e0b",
-      description: "Project success rate",
-      details: "On-time, on-budget delivery",
+      description: t("dashboard.project_success_description"),
+      details: t("dashboard.on_time_budget"),
     },
   ]
 
@@ -81,13 +83,13 @@ export function DashboardChart() {
       {/* Header */}
       <div className="relative z-10 mb-6">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold text-white">Client Impact Metrics</h3>
+          <h3 className="text-lg font-semibold text-white">{t("dashboard.client_impact_metrics")}</h3>
           <div className="flex items-center space-x-1 bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span>Live Data</span>
+            <span>{t("dashboard.live_data")}</span>
           </div>
         </div>
-        <p className="text-gray-400 text-sm">Real results from our client partnerships</p>
+        <p className="text-gray-400 text-sm">{t("dashboard.real_results")}</p>
       </div>
 
       {/* Main Metric Display */}
@@ -145,23 +147,17 @@ export function DashboardChart() {
         <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 rounded-lg p-3 text-center">
           <div className="flex items-center justify-center space-x-1 mb-1">
             <Building className="w-4 h-4 text-blue-400" />
-            <span className="text-xs text-gray-400">Enterprises</span>
+            <span className="text-xs text-gray-400">{t("dashboard.enterprises")}</span>
           </div>
           <p className="text-lg font-bold text-white">47</p>
         </div>
         <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/30 rounded-lg p-3 text-center">
           <div className="flex items-center justify-center space-x-1 mb-1">
             <Target className="w-4 h-4 text-purple-400" />
-            <span className="text-xs text-gray-400">ROI Avg</span>
+            <span className="text-xs text-gray-400">{t("dashboard.roi_avg")}</span>
           </div>
           <p className="text-lg font-bold text-white">340%</p>
         </div>
-      </div>
-
-      {/* Powered by badge */}
-      <div className="absolute bottom-4 right-4 flex items-center space-x-2 px-3 py-1.5 bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-700/50">
-        <span className="text-xs text-gray-400">powered by</span>
-        <img src="/images/weltivation-logo.png" alt="Weltivation" className="h-4" />
       </div>
 
       {/* Floating Elements */}

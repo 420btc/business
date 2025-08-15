@@ -8,9 +8,11 @@ import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { useLanguage } from "@/contexts/language-context"
 import { DollarSign, Clock, Users, Award, Zap, Globe, CheckCircle, Mail, ArrowRight } from "lucide-react"
 
 export default function PartnershipPage() {
+  const { t } = useLanguage()
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -57,7 +59,7 @@ export default function PartnershipPage() {
               transition={{ duration: 0.8 }}
               className="text-5xl sm:text-7xl font-black mb-20 leading-tight text-white"
             >
-              Partnership <span className="text-emerald-400">Benefits</span>
+              {t("partnership.page_title").split(" ").slice(0, 1).join(" ")} <span className="text-emerald-400">{t("partnership.page_title").split(" ").slice(1).join(" ")}</span>
             </motion.h1>
 
             {/* Enhanced Badge Layout */}
@@ -71,13 +73,13 @@ export default function PartnershipPage() {
               <div className="relative bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-xl border-2 border-emerald-500/30 rounded-3xl p-12 shadow-2xl shadow-emerald-500/10">
                 <div className="flex flex-col items-center space-y-6">
                   <div className="flex items-center space-x-4">
-                    <span className="text-3xl text-gray-300 font-light">powered by</span>
-                    <img src="/images/weltivation-logo.png" alt="Weltivation" className="w-80 h-20 object-contain" />
+                    <span className="text-3xl text-gray-300 font-light">{t("partnership.powered_by")}</span>
+                    <span className="text-4xl font-bold text-white">Carlos Freire</span>
                   </div>
                   <div className="text-center">
-                    <p className="text-gray-400 text-xl mb-2">Keep our badge and unlock</p>
+                    <p className="text-gray-400 text-xl mb-2">{t("partnership.keep_badge_unlock")}</p>
                     <p className="text-4xl font-bold text-emerald-400 mb-2">$37,000+</p>
-                    <p className="text-gray-400 text-lg">in exclusive partnership benefits</p>
+                    <p className="text-gray-400 text-lg">{t("partnership.exclusive_benefits")}</p>
                   </div>
                 </div>
 
@@ -95,11 +97,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <DollarSign className="w-6 h-6 text-emerald-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">15% Discount</h3>
-                          <p className="text-sm text-gray-400">Development Projects</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.discount_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.discount_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30">Save $30K+</Badge>
+                      <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30">{t("partnership.discount_badge")}</Badge>
                     </div>
                   </motion.div>
 
@@ -115,11 +117,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <Clock className="w-6 h-6 text-blue-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">Free Maintenance</h3>
-                          <p className="text-sm text-gray-400">3 Months Included</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.maintenance_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.maintenance_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">$5K Value</Badge>
+                      <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">{t("partnership.maintenance_badge")}</Badge>
                     </div>
                   </motion.div>
 
@@ -135,11 +137,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <Users className="w-6 h-6 text-purple-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">Priority Support</h3>
-                          <p className="text-sm text-gray-400">24/7 VIP Access</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.support_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.support_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">Enterprise</Badge>
+                      <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">{t("partnership.support_badge")}</Badge>
                     </div>
                   </motion.div>
 
@@ -155,11 +157,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <Globe className="w-6 h-6 text-orange-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">Global CDN</h3>
-                          <p className="text-sm text-gray-400">6 Months Free</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.cdn_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.cdn_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">$2K Value</Badge>
+                      <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">{t("partnership.cdn_badge")}</Badge>
                     </div>
                   </motion.div>
 
@@ -175,11 +177,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <Zap className="w-6 h-6 text-yellow-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">Performance</h3>
-                          <p className="text-sm text-gray-400">99.9% Uptime</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.performance_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.performance_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">Guaranteed</Badge>
+                      <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">{t("partnership.performance_badge")}</Badge>
                     </div>
                   </motion.div>
 
@@ -195,11 +197,11 @@ export default function PartnershipPage() {
                       <div className="flex items-center space-x-3 mb-3">
                         <Award className="w-6 h-6 text-indigo-400" />
                         <div>
-                          <h3 className="text-lg font-bold text-white">Flexible Badge</h3>
-                          <p className="text-sm text-gray-400">Remove Anytime</p>
+                          <h3 className="text-lg font-bold text-white">{t("partnership.flexible_title")}</h3>
+                          <p className="text-sm text-gray-400">{t("partnership.flexible_subtitle")}</p>
                         </div>
                       </div>
-                      <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30">No Strings</Badge>
+                      <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30">{t("partnership.flexible_badge")}</Badge>
                     </div>
                   </motion.div>
                 </div>
@@ -216,9 +218,8 @@ export default function PartnershipPage() {
               transition={{ duration: 0.8, delay: 1.2 }}
               className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             >
-              Display our badge on your website and gain access to premium partnership benefits worth over{" "}
-              <span className="text-emerald-400 font-bold">$37,000</span>. No long-term commitments, remove anytime
-              after project completion.
+              {t("partnership.hero_description").replace("$37,000", "")}
+              <span className="text-emerald-400 font-bold">$37,000</span>{t("partnership.hero_description").split("$37,000")[1]}
             </motion.p>
           </div>
         </div>
@@ -234,10 +235,10 @@ export default function PartnershipPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Ready to <span className="text-emerald-400">Partner?</span>
+              {t("partnership.ready_to_partner").split(" ").slice(0, 2).join(" ")} <span className="text-emerald-400">{t("partnership.ready_to_partner").split(" ").slice(2).join(" ")}</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Join our partnership program and start saving on your next project
+              {t("partnership.join_program")}
             </p>
           </motion.div>
 
@@ -250,8 +251,8 @@ export default function PartnershipPage() {
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">Apply for Partnership</h3>
-                  <p className="text-gray-400">Enter your email to get started with our partnership program</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{t("partnership.apply_for_partnership")}</h3>
+                  <p className="text-gray-400">{t("partnership.enter_email_description")}</p>
                 </div>
 
                 <div className="max-w-md mx-auto">
@@ -261,7 +262,7 @@ export default function PartnershipPage() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email address"
+                      placeholder={t("partnership.email_placeholder")}
                       required
                       className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-white placeholder-gray-400 text-lg"
                     />
@@ -275,14 +276,14 @@ export default function PartnershipPage() {
                     className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-12 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300"
                   >
                     <div className="flex items-center space-x-2">
-                      <span>Apply for Partnership</span>
+                      <span>{t("partnership.apply_button")}</span>
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </Button>
                 </div>
 
                 <div className="text-center text-sm text-gray-500">
-                  By applying, you agree to display our badge and receive partnership benefits.
+                  {t("partnership.agreement_text")}
                 </div>
               </form>
             ) : (
@@ -300,17 +301,16 @@ export default function PartnershipPage() {
                 >
                   <CheckCircle className="w-10 h-10 text-white" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-white mb-4">Application Submitted!</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{t("partnership.application_submitted")}</h3>
                 <p className="text-gray-400 mb-8 max-w-md mx-auto">
-                  We've received your partnership application. Our team will contact you within 24 hours with next
-                  steps.
+                  {t("partnership.contact_within_24h")}
                 </p>
                 <Button
                   onClick={() => setIsSubmitted(false)}
                   variant="outline"
                   className="border-gray-600 text-gray-300 hover:bg-gray-800"
                 >
-                  Submit Another Application
+                  {t("partnership.submit_another")}
                 </Button>
               </motion.div>
             )}

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
+import { useLanguage } from "@/contexts/language-context"
 import { Send, Bot, User, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -15,10 +16,11 @@ type Message = {
 }
 
 export default function SupportPage() {
+  const { t } = useLanguage()
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "Hello! I'm your AI support assistant. How can I help you today?",
+      text: t("support.initial_bot_message"),
       sender: "bot",
       timestamp: new Date(),
     },
@@ -28,44 +30,36 @@ export default function SupportPage() {
 
   const faqs = [
     {
-      question: "How do I get started with a new project?",
-      answer:
-        "Getting started is easy! Simply book a free consultation through our website, and we'll discuss your project requirements, timeline, and budget. Our team will then create a custom proposal tailored to your needs.",
+      question: t("support.faq1.question"),
+      answer: t("support.faq1.answer"),
     },
     {
-      question: "What is your typical project timeline?",
-      answer:
-        "Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, while complex applications can take 8-16 weeks. We'll provide a detailed timeline during your consultation.",
+      question: t("support.faq2.question"),
+      answer: t("support.faq2.answer"),
     },
     {
-      question: "Do you offer ongoing support and maintenance?",
-      answer:
-        "Yes! We offer comprehensive support packages including regular updates, security monitoring, performance optimization, and technical support. Our maintenance plans start at $299/month.",
+      question: t("support.faq3.question"),
+      answer: t("support.faq3.answer"),
     },
     {
-      question: "Can you work with my existing team?",
-      answer:
-        "We love collaborating with in-house teams. We can integrate seamlessly with your existing workflows, provide training, and work alongside your developers and designers.",
+      question: t("support.faq4.question"),
+      answer: t("support.faq4.answer"),
     },
     {
-      question: "What technologies do you specialize in?",
-      answer:
-        "We specialize in modern web technologies including React, Next.js, Node.js, Python, and cloud platforms like AWS and Vercel. We also work with mobile technologies like React Native and Flutter.",
+      question: t("support.faq5.question"),
+      answer: t("support.faq5.answer"),
     },
     {
-      question: "How do you handle project communication?",
-      answer:
-        "We use a combination of Slack, email, and regular video calls to keep you updated. You'll have access to a project dashboard where you can track progress, view deliverables, and communicate with the team.",
+      question: t("support.faq6.question"),
+      answer: t("support.faq6.answer"),
     },
     {
-      question: "What is your payment structure?",
-      answer:
-        "We typically work with a 50% upfront payment and 50% upon completion for smaller projects. For larger projects, we can arrange milestone-based payments. We accept all major payment methods and can provide financing options.",
+      question: t("support.faq7.question"),
+      answer: t("support.faq7.answer"),
     },
     {
-      question: "Do you provide hosting and domain services?",
-      answer:
-        "Yes, we can handle all aspects of hosting and domain management. We work with premium hosting providers and can set up everything from basic shared hosting to enterprise-level cloud infrastructure.",
+      question: t("support.faq8.question"),
+      answer: t("support.faq8.answer"),
     },
   ]
 
@@ -101,23 +95,23 @@ export default function SupportPage() {
   const getBotResponse = (message: string): string => {
     const lowerMessage = message.toLowerCase()
 
-    if (lowerMessage.includes("price") || lowerMessage.includes("cost") || lowerMessage.includes("budget")) {
-      return "Our pricing varies based on project scope and complexity. For a detailed quote, I'd recommend booking a free consultation where we can discuss your specific needs. Would you like me to help you schedule one?"
+    if (lowerMessage.includes("price") || lowerMessage.includes("cost") || lowerMessage.includes("budget") || lowerMessage.includes("precio") || lowerMessage.includes("costo") || lowerMessage.includes("presupuesto")) {
+      return t("support.bot.price_response")
     }
 
-    if (lowerMessage.includes("timeline") || lowerMessage.includes("how long")) {
-      return "Project timelines depend on the complexity and scope. Simple websites typically take 2-4 weeks, while complex applications can take 8-16 weeks. What type of project are you considering?"
+    if (lowerMessage.includes("timeline") || lowerMessage.includes("how long") || lowerMessage.includes("cronograma") || lowerMessage.includes("cuanto tiempo")) {
+      return t("support.bot.timeline_response")
     }
 
-    if (lowerMessage.includes("consultation") || lowerMessage.includes("meeting")) {
-      return "I'd be happy to help you schedule a free consultation! You can book directly through our consultation page, or I can connect you with our team. What works better for you?"
+    if (lowerMessage.includes("consultation") || lowerMessage.includes("meeting") || lowerMessage.includes("consulta") || lowerMessage.includes("reunion")) {
+      return t("support.bot.consultation_response")
     }
 
-    if (lowerMessage.includes("support") || lowerMessage.includes("maintenance")) {
-      return "We offer comprehensive support packages including updates, security monitoring, and technical support starting at $299/month. Would you like to know more about our support options?"
+    if (lowerMessage.includes("support") || lowerMessage.includes("maintenance") || lowerMessage.includes("soporte") || lowerMessage.includes("mantenimiento")) {
+      return t("support.bot.support_response")
     }
 
-    return "That's a great question! I'd be happy to connect you with one of our specialists who can provide detailed information. Would you like me to schedule a call, or do you have any other questions I can help with right now?"
+    return t("support.bot.default_response")
   }
 
   return (
@@ -130,19 +124,18 @@ export default function SupportPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-emerald-500/10 rounded-full border border-emerald-500/20 mb-6">
               <Bot className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-400">AI-Powered Support</span>
+              <span className="text-sm font-medium text-emerald-400">{t("support.ai_powered_support")}</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-white">Get </span>
+              <span className="text-white">{t("support.page_title").split(" ").slice(0, 1).join(" ")} </span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-blue-400">
-                Instant Help
+                {t("support.page_title").split(" ").slice(1).join(" ")}
               </span>
             </h1>
 
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-              Chat with our AI assistant for immediate support, or browse our comprehensive FAQ section for quick
-              answers.
+              {t("support.page_subtitle")}
             </p>
           </motion.div>
         </div>
@@ -164,10 +157,10 @@ export default function SupportPage() {
                   <Bot className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">Support Assistant</h3>
+                  <h3 className="text-xl font-semibold text-white">{t("support.support_assistant")}</h3>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-sm text-emerald-400">Online</span>
+                    <span className="text-sm text-emerald-400">{t("support.online")}</span>
                   </div>
                 </div>
               </div>
@@ -244,7 +237,7 @@ export default function SupportPage() {
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-                  placeholder="Type your message..."
+                  placeholder={t("support.type_message")}
                   className="flex-1 px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:border-emerald-500 focus:outline-none"
                 />
                 <Button
@@ -268,8 +261,8 @@ export default function SupportPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-400">Quick answers to common questions about our services and process.</p>
+            <h2 className="text-3xl font-bold mb-4">{t("support.faq_title")}</h2>
+            <p className="text-gray-400">{t("support.faq_subtitle")}</p>
           </motion.div>
 
           <motion.div

@@ -4,70 +4,72 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { ModeToggle } from "@/components/mode-toggle"
+import { useLanguage } from "@/contexts/language-context"
 import { cn } from "@/lib/utils"
 import { GraduationCap, HeartHandshake, User2, Users2, Zap } from "lucide-react"
 import Link from "next/link"
 import { Icons } from "@/components/icons"
 
-const features = [
-  {
-    name: "Engaging Learning Experience",
-    description: "Interactive lessons and real-world projects make learning fun and effective.",
-    icon: GraduationCap,
-  },
-  {
-    name: "Personalized Mentorship",
-    description: "Receive guidance and support from experienced mentors to achieve your goals.",
-    icon: User2,
-  },
-  {
-    name: "Collaborative Community",
-    description: "Connect with fellow learners, share ideas, and build lasting relationships.",
-    icon: Users2,
-  },
-  {
-    name: "Career Advancement",
-    description: "Gain in-demand skills and access career resources to unlock new opportunities.",
-    icon: HeartHandshake,
-  },
-]
-
-const testimonials = [
-  {
-    name: "Sarah L.",
-    title: "Software Engineer",
-    quote: "I landed my dream job after completing this program. The skills I learned were invaluable.",
-    image: "/placeholder-user.jpg",
-  },
-  {
-    name: "David M.",
-    title: "Data Scientist",
-    quote: "The mentorship and community support were exceptional. I highly recommend this platform.",
-    image: "/placeholder-user.jpg",
-  },
-  {
-    name: "Emily R.",
-    title: "UX Designer",
-    quote: "I transformed my career with this program. The curriculum is comprehensive and up-to-date.",
-    image: "/placeholder-user.jpg",
-  },
-]
-
 export default function DashboardPage() {
+  const { t } = useLanguage()
+
+  const features = [
+    {
+      name: t("dashboard.feature1.name"),
+      description: t("dashboard.feature1.description"),
+      icon: GraduationCap,
+    },
+    {
+      name: t("dashboard.feature2.name"),
+      description: t("dashboard.feature2.description"),
+      icon: User2,
+    },
+    {
+      name: t("dashboard.feature3.name"),
+      description: t("dashboard.feature3.description"),
+      icon: Users2,
+    },
+    {
+      name: t("dashboard.feature4.name"),
+      description: t("dashboard.feature4.description"),
+      icon: HeartHandshake,
+    },
+  ]
+
+  const testimonials = [
+    {
+      name: t("dashboard.testimonial1.name"),
+      title: t("dashboard.testimonial1.title"),
+      quote: t("dashboard.testimonial1.quote"),
+      image: "/placeholder-user.jpg",
+    },
+    {
+      name: t("dashboard.testimonial2.name"),
+      title: t("dashboard.testimonial2.title"),
+      quote: t("dashboard.testimonial2.quote"),
+      image: "/placeholder-user.jpg",
+    },
+    {
+      name: t("dashboard.testimonial3.name"),
+      title: t("dashboard.testimonial3.title"),
+      quote: t("dashboard.testimonial3.quote"),
+      image: "/placeholder-user.jpg",
+    },
+  ]
   return (
     <div className="container relative">
       <header className="flex items-center justify-between py-10">
         <Link href="#" className="flex items-center space-x-2">
           <Icons.logo className="h-6 w-6" />
-          <span className="hidden font-bold sm:inline-block">Acme Corp</span>
+          <span className="hidden font-bold sm:inline-block">{t("dashboard.page.company_name")}</span>
         </Link>
         <div className="flex items-center space-x-2">
           <ModeToggle />
           <Link href="/login" className={cn(Button, "bg-background hover:bg-secondary")}>
-            Login
+            {t("dashboard.page.login")}
           </Link>
           <Link href="/sign-up" className={cn(Button, "bg-primary text-primary-foreground hover:bg-primary/90")}>
-            Sign Up
+            {t("dashboard.page.sign_up")}
           </Link>
         </div>
       </header>
@@ -76,11 +78,10 @@ export default function DashboardPage() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Unlock Your Potential with Expert-Led Courses
+                {t("dashboard.page.hero_title")}
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Transform your career with our comprehensive online courses. Learn from industry experts and gain
-                in-demand skills.
+                {t("dashboard.page.hero_description")}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -90,7 +91,7 @@ export default function DashboardPage() {
                 size="lg"
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-3"
               >
-                Services
+                {t("dashboard.page.services")}
               </Button>
               <Button
                 onClick={() => (window.location.href = "/consultation")}
@@ -98,7 +99,7 @@ export default function DashboardPage() {
                 className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-medium px-8 py-3"
               >
                 <Zap className="w-5 h-5 mr-2" />
-                Free Consultation
+                {t("dashboard.page.free_consultation")}
               </Button>
             </div>
           </div>
@@ -130,9 +131,9 @@ export default function DashboardPage() {
       </section>
       <section className="py-12 md:py-24 lg:py-32">
         <div className="container">
-          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl">{t("dashboard.testimonials.title")}</h2>
           <p className="max-w-[800px] text-gray-500 mx-auto mt-4 text-center md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Don't just take our word for it. See how our courses have helped students achieve their goals.
+            {t("dashboard.testimonials.subtitle")}
           </p>
           <Carousel className="container mt-12">
             <CarouselContent className="-ml-1 md:ml-0">
@@ -176,9 +177,9 @@ export default function DashboardPage() {
             />
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Transform Your Career?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{t("dashboard.cta.title")}</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join our community of learners and start your journey towards a brighter future.
+                  {t("dashboard.cta.description")}
                 </p>
               </div>
               <Button
@@ -186,7 +187,7 @@ export default function DashboardPage() {
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium"
               >
-                Get Started Today
+                {t("dashboard.cta.button")}
               </Button>
             </div>
           </div>
@@ -194,13 +195,13 @@ export default function DashboardPage() {
       </section>
       <footer className="border-t py-12">
         <div className="container flex flex-col items-center justify-between md:flex-row">
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Acme Corp. All rights reserved.</p>
+          <p className="text-gray-500">&copy; {new Date().getFullYear()} {t("dashboard.page.company_name")}. {t("dashboard.footer.copyright")}</p>
           <div className="mt-4 flex space-x-4 md:mt-0">
             <Link href="#" className="text-gray-500 hover:text-gray-700">
-              Terms of Service
+              {t("dashboard.footer.terms")}
             </Link>
             <Link href="#" className="text-gray-500 hover:text-gray-700">
-              Privacy Policy
+              {t("dashboard.footer.privacy")}
             </Link>
           </div>
         </div>

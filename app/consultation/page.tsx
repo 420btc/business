@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { BusinessProfileHeader } from "@/components/business-profile-header"
+import { useLanguage } from "@/contexts/language-context"
 import {
   ChevronRight,
   ChevronLeft,
@@ -45,6 +46,7 @@ type ConsultationData = {
 }
 
 export default function ConsultationPage() {
+  const { t } = useLanguage()
   const [currentStep, setCurrentStep] = useState(0)
   const [isGuest, setIsGuest] = useState(false)
   const [consultationData, setConsultationData] = useState<ConsultationData>({
@@ -94,32 +96,32 @@ export default function ConsultationPage() {
   const businessTypes = [
     {
       id: "startup",
-      label: "Startup",
-      description: "Early-stage innovation",
+      label: t("consultation.business.startup"),
+      description: t("consultation.business.startup_desc"),
       icon: "🚀",
       gradient: "from-emerald-500/20 to-green-500/20",
       border: "border-emerald-500/30",
     },
     {
       id: "smb",
-      label: "Small Business",
-      description: "Established enterprise",
+      label: t("consultation.business.smb"),
+      description: t("consultation.business.smb_desc"),
       icon: "🏢",
       gradient: "from-blue-500/20 to-cyan-500/20",
       border: "border-blue-500/30",
     },
     {
       id: "enterprise",
-      label: "Enterprise",
-      description: "Large corporation",
+      label: t("consultation.business.enterprise"),
+      description: t("consultation.business.enterprise_desc"),
       icon: "🏛️",
       gradient: "from-purple-500/20 to-indigo-500/20",
       border: "border-purple-500/30",
     },
     {
       id: "agency",
-      label: "Agency",
-      description: "Creative & marketing",
+      label: t("consultation.business.agency"),
+      description: t("consultation.business.agency_desc"),
       icon: "🎨",
       gradient: "from-pink-500/20 to-rose-500/20",
       border: "border-pink-500/30",
@@ -127,78 +129,78 @@ export default function ConsultationPage() {
   ]
 
   const companySizes = [
-    { id: "1-10", label: "1-10 employees", description: "Small team", icon: "👥" },
-    { id: "11-50", label: "11-50 employees", description: "Growing company", icon: "🏢" },
-    { id: "51-200", label: "51-200 employees", description: "Mid-size", icon: "🏬" },
-    { id: "200+", label: "200+ employees", description: "Large corp", icon: "🏭" },
+    { id: "1-10", label: t("consultation.size.1-10"), description: t("consultation.size.1-10_desc"), icon: "👥" },
+    { id: "11-50", label: t("consultation.size.11-50"), description: t("consultation.size.11-50_desc"), icon: "🏢" },
+    { id: "51-200", label: t("consultation.size.51-200"), description: t("consultation.size.51-200_desc"), icon: "🏬" },
+    { id: "200+", label: t("consultation.size.200+"), description: t("consultation.size.200+_desc"), icon: "🏭" },
   ]
 
   const projectTypes = [
     {
       id: "website",
-      label: "Website Development",
+      label: t("consultation.project.website"),
       icon: <Globe className="w-6 h-6" />,
       color: "emerald",
-      description: "Web applications",
+      description: t("consultation.project.website_desc"),
     },
     {
       id: "mobile",
-      label: "Mobile App",
+      label: t("consultation.project.mobile"),
       icon: <Smartphone className="w-6 h-6" />,
       color: "blue",
-      description: "iOS & Android",
+      description: t("consultation.project.mobile_desc"),
     },
     {
       id: "digital",
-      label: "Digital Systems",
+      label: t("consultation.project.digital"),
       icon: <Laptop className="w-6 h-6" />,
       color: "purple",
-      description: "Enterprise software",
+      description: t("consultation.project.digital_desc"),
     },
     {
       id: "mechanical",
-      label: "Mechanical Engineering",
+      label: t("consultation.project.mechanical"),
       icon: <Cog className="w-6 h-6" />,
       color: "orange",
-      description: "Product design",
+      description: t("consultation.project.mechanical_desc"),
     },
     {
       id: "product",
-      label: "Product Development",
+      label: t("consultation.project.product"),
       icon: <Package className="w-6 h-6" />,
       color: "cyan",
-      description: "End-to-end solutions",
+      description: t("consultation.project.product_desc"),
     },
     {
       id: "architecture",
-      label: "Architecture Design",
+      label: t("consultation.project.architecture"),
       icon: <Building2 className="w-6 h-6" />,
       color: "indigo",
-      description: "Structural design",
+      description: t("consultation.project.architecture_desc"),
     },
   ]
 
   const budgetRanges = [
-    { id: "5k-25k", label: "$5K - $25K", description: "Small projects", icon: "💡" },
-    { id: "25k-100k", label: "$25K - $100K", description: "Medium solutions", icon: "🚀" },
-    { id: "100k-500k", label: "$100K - $500K", description: "Enterprise", icon: "🏢" },
-    { id: "500k+", label: "$500K+", description: "Transformation", icon: "⭐" },
+    { id: "5k-25k", label: t("consultation.budget.5k-25k"), description: t("consultation.budget.5k-25k_desc"), icon: "💡" },
+    { id: "25k-100k", label: t("consultation.budget.25k-100k"), description: t("consultation.budget.25k-100k_desc"), icon: "🚀" },
+    { id: "100k-500k", label: t("consultation.budget.100k-500k"), description: t("consultation.budget.100k-500k_desc"), icon: "🏢" },
+    { id: "500k+", label: t("consultation.budget.500k+"), description: t("consultation.budget.500k+_desc"), icon: "⭐" },
   ]
 
   const timelines = [
-    { id: "asap", label: "ASAP", description: "Immediate start", icon: "⚡" },
-    { id: "1-3months", label: "1-3 months", description: "Planning phase", icon: "📅" },
-    { id: "3-6months", label: "3-6 months", description: "Flexible dev", icon: "🎯" },
-    { id: "6months+", label: "6+ months", description: "Long-term", icon: "🗺️" },
+    { id: "asap", label: t("consultation.timeline.asap"), description: t("consultation.timeline.asap_desc"), icon: "⚡" },
+    { id: "1-3months", label: t("consultation.timeline.1-3months"), description: t("consultation.timeline.1-3months_desc"), icon: "📅" },
+    { id: "3-6months", label: t("consultation.timeline.3-6months"), description: t("consultation.timeline.3-6months_desc"), icon: "🎯" },
+    { id: "6months+", label: t("consultation.timeline.6months+"), description: t("consultation.timeline.6months+_desc"), icon: "🗺️" },
   ]
 
   const businessGoals = [
-    { id: "increase-sales", label: "Increase Sales", icon: <TrendingUp className="w-5 h-5" />, color: "emerald" },
-    { id: "improve-efficiency", label: "Improve Efficiency", icon: <Rocket className="w-5 h-5" />, color: "blue" },
-    { id: "expand-market", label: "Expand Market", icon: <Target className="w-5 h-5" />, color: "purple" },
-    { id: "reduce-costs", label: "Reduce Costs", icon: <BarChart className="w-5 h-5" />, color: "green" },
-    { id: "modernize", label: "Modernize Ops", icon: <Sparkles className="w-5 h-5" />, color: "orange" },
-    { id: "competitive-advantage", label: "Competitive Edge", icon: <Shield className="w-5 h-5" />, color: "cyan" },
+    { id: "increase-sales", label: t("consultation.goals.increase-sales"), icon: <TrendingUp className="w-5 h-5" />, color: "emerald" },
+    { id: "improve-efficiency", label: t("consultation.goals.improve-efficiency"), icon: <Rocket className="w-5 h-5" />, color: "blue" },
+    { id: "expand-market", label: t("consultation.goals.expand-market"), icon: <Target className="w-5 h-5" />, color: "purple" },
+    { id: "reduce-costs", label: t("consultation.goals.reduce-costs"), icon: <BarChart className="w-5 h-5" />, color: "green" },
+    { id: "modernize", label: t("consultation.goals.modernize"), icon: <Sparkles className="w-5 h-5" />, color: "orange" },
+    { id: "competitive-advantage", label: t("consultation.goals.competitive-advantage"), icon: <Shield className="w-5 h-5" />, color: "cyan" },
   ]
 
   const nextStep = () => {
@@ -255,11 +257,11 @@ export default function ConsultationPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Strategic Consultation
+                {t("consultation.strategic_consultation")}
               </div>
               <h1 className="text-3xl md:text-4xl font-bold">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400">
-                  Step {currentStep + 1} of {steps.length}
+                  {t("consultation.step_of").replace("{current}", (currentStep + 1).toString()).replace("{total}", steps.length.toString())}
                 </span>
               </h1>
             </motion.div>
@@ -307,9 +309,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Building className="w-6 h-6 mr-3 text-emerald-400" />
-                        What type of business are you?
+                        {t("consultation.step1.title")}
                       </h2>
-                      <p className="text-gray-400">Help us understand your business context</p>
+                      <p className="text-gray-400">{t("consultation.step1.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -348,9 +350,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Users className="w-6 h-6 mr-3 text-blue-400" />
-                        Company size?
+                        {t("consultation.step2.title")}
                       </h2>
-                      <p className="text-gray-400">This helps us scale our recommendations</p>
+                      <p className="text-gray-400">{t("consultation.step2.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -389,9 +391,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Target className="w-6 h-6 mr-3 text-purple-400" />
-                        What services do you need?
+                        {t("consultation.step3.title")}
                       </h2>
-                      <p className="text-gray-400">Select all that apply</p>
+                      <p className="text-gray-400">{t("consultation.step3.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -430,9 +432,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <DollarSign className="w-6 h-6 mr-3 text-green-400" />
-                        What's your budget range?
+                        {t("consultation.step4.title")}
                       </h2>
-                      <p className="text-gray-400">This helps us recommend the right solution</p>
+                      <p className="text-gray-400">{t("consultation.step4.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -471,9 +473,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Clock className="w-6 h-6 mr-3 text-orange-400" />
-                        When do you want to start?
+                        {t("consultation.step5.title")}
                       </h2>
-                      <p className="text-gray-400">Timeline helps us plan your project</p>
+                      <p className="text-gray-400">{t("consultation.step5.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -512,9 +514,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Rocket className="w-6 h-6 mr-3 text-cyan-400" />
-                        What are your main goals?
+                        {t("consultation.step6.title")}
                       </h2>
-                      <p className="text-gray-400">Select all that apply</p>
+                      <p className="text-gray-400">{t("consultation.step6.subtitle")}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -552,9 +554,9 @@ export default function ConsultationPage() {
                     <div className="text-center space-y-2">
                       <h2 className="text-2xl font-bold flex items-center justify-center">
                         <Calendar className="w-6 h-6 mr-3 text-emerald-400" />
-                        Let's get your consultation scheduled
+                        {t("consultation.step7.title")}
                       </h2>
-                      <p className="text-gray-400">Final step to unlock your strategy</p>
+                      <p className="text-gray-400">{t("consultation.step7.subtitle")}</p>
                     </div>
 
                     {/* Guest Mode Toggle */}
@@ -562,8 +564,8 @@ export default function ConsultationPage() {
                       <div className="p-4 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-xl border border-emerald-500/20">
                         <div className="flex items-center justify-between">
                           <div>
-                            <h3 className="font-bold text-white">Try as Guest</h3>
-                            <p className="text-gray-400 text-sm">Preview dashboard without saving info</p>
+                            <h3 className="font-bold text-white">{t("consultation.guest_mode")}</h3>
+                            <p className="text-gray-400 text-sm">{t("consultation.guest_mode_desc")}</p>
                           </div>
                           <button
                             onClick={() => setIsGuest(!isGuest)}
@@ -585,46 +587,46 @@ export default function ConsultationPage() {
                       <div className="max-w-2xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="space-y-2">
-                            <label className="block text-sm font-medium text-gray-300">Full Name *</label>
+                            <label className="block text-sm font-medium text-gray-300">{t("consultation.full_name")} *</label>
                             <input
                               type="text"
                               value={consultationData.name}
                               onChange={(e) => setConsultationData({ ...consultationData, name: e.target.value })}
                               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-emerald-500 focus:outline-none transition-all"
-                              placeholder="Your full name"
+                              placeholder={t("consultation.full_name_placeholder")}
                             />
                           </div>
 
                           <div className="space-y-2">
-                            <label className="block text-sm font-medium text-gray-300">Email Address *</label>
+                            <label className="block text-sm font-medium text-gray-300">{t("consultation.email_address")} *</label>
                             <input
                               type="email"
                               value={consultationData.email}
                               onChange={(e) => setConsultationData({ ...consultationData, email: e.target.value })}
                               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-emerald-500 focus:outline-none transition-all"
-                              placeholder="your@email.com"
+                              placeholder={t("consultation.email_placeholder")}
                             />
                           </div>
 
                           <div className="space-y-2">
-                            <label className="block text-sm font-medium text-gray-300">Company Name</label>
+                            <label className="block text-sm font-medium text-gray-300">{t("consultation.company_name")}</label>
                             <input
                               type="text"
                               value={consultationData.company}
                               onChange={(e) => setConsultationData({ ...consultationData, company: e.target.value })}
                               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-emerald-500 focus:outline-none transition-all"
-                              placeholder="Your company"
+                              placeholder={t("consultation.company_placeholder")}
                             />
                           </div>
 
                           <div className="space-y-2">
-                            <label className="block text-sm font-medium text-gray-300">Phone Number</label>
+                            <label className="block text-sm font-medium text-gray-300">{t("consultation.phone_number")}</label>
                             <input
                               type="tel"
                               value={consultationData.phone}
                               onChange={(e) => setConsultationData({ ...consultationData, phone: e.target.value })}
                               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-emerald-500 focus:outline-none transition-all"
-                              placeholder="+1 (555) 123-4567"
+                              placeholder={t("consultation.phone_placeholder")}
                             />
                           </div>
                         </div>
@@ -637,9 +639,9 @@ export default function ConsultationPage() {
                           <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
                             <Sparkles className="w-6 h-6 text-emerald-400" />
                           </div>
-                          <h3 className="font-bold text-emerald-400 mb-2">Guest Mode Active</h3>
+                          <h3 className="font-bold text-emerald-400 mb-2">{t("consultation.guest_mode_active")}</h3>
                           <p className="text-gray-400">
-                            Explore our dashboard and see what we offer. Sign up at the end to save your consultation.
+                            {t("consultation.guest_mode_message")}
                           </p>
                         </div>
                       </div>
@@ -659,7 +661,7 @@ export default function ConsultationPage() {
               className="border-gray-600 text-gray-300 hover:bg-gray-800 disabled:opacity-50"
             >
               <ChevronLeft className="w-4 h-4 mr-2" />
-              Previous
+              {t("consultation.previous")}
             </Button>
 
             {currentStep < steps.length - 1 ? (
@@ -667,7 +669,7 @@ export default function ConsultationPage() {
                 onClick={nextStep}
                 className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white"
               >
-                Next Step
+                {t("consultation.next_step")}
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>
             ) : (
@@ -675,7 +677,7 @@ export default function ConsultationPage() {
                 onClick={handleSubmit}
                 className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white"
               >
-                {isGuest ? "Preview Dashboard" : "Start Consultation"}
+                {isGuest ? t("consultation.preview_dashboard") : t("consultation.start_consultation")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             )}

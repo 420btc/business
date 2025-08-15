@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import { CodeRain } from "@/components/code-rain"
+import { useLanguage } from "@/contexts/language-context"
 import {
   MessageCircle,
   Search,
@@ -27,210 +28,211 @@ import {
 } from "lucide-react"
 
 export default function ProcessPage() {
+  const { t } = useLanguage()
   const [activeStep, setActiveStep] = useState(0)
 
   const processSteps = [
     {
       id: "discovery",
-      title: "Discovery & Planning",
-      duration: "1-2 weeks",
+      title: t("process.discovery.title"),
+      duration: t("process.discovery.duration"),
       icon: <MessageCircle className="w-6 h-6" />,
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/20",
-      description: "We dive deep into understanding your business, goals, and technical requirements.",
+      description: t("process.discovery.description"),
       activities: [
-        "Stakeholder interviews and requirements gathering",
-        "Technical architecture planning and system design",
-        "User research and competitive analysis",
-        "Project roadmap and timeline creation",
-        "Risk assessment and mitigation planning",
+        t("process.discovery.activity1"),
+        t("process.discovery.activity2"),
+        t("process.discovery.activity3"),
+        t("process.discovery.activity4"),
+        t("process.discovery.activity5"),
       ],
       deliverables: [
-        "Detailed project specification document",
-        "Technical architecture diagram",
-        "Project timeline and milestones",
-        "Resource allocation plan",
-        "Risk management strategy",
+        t("process.discovery.deliverable1"),
+        t("process.discovery.deliverable2"),
+        t("process.discovery.deliverable3"),
+        t("process.discovery.deliverable4"),
+        t("process.discovery.deliverable5"),
       ],
     },
     {
       id: "design",
-      title: "Design & Prototyping",
-      duration: "2-3 weeks",
+      title: t("process.design.title"),
+      duration: t("process.design.duration"),
       icon: <Search className="w-6 h-6" />,
       color: "text-purple-500",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/20",
-      description: "Creating user-centered designs and interactive prototypes to validate concepts.",
+      description: t("process.design.description"),
       activities: [
-        "User experience (UX) design and user journey mapping",
-        "User interface (UI) design and visual identity",
-        "Interactive prototyping and wireframing",
-        "Design system creation and component library",
-        "Usability testing and design iteration",
+        t("process.design.activity1"),
+        t("process.design.activity2"),
+        t("process.design.activity3"),
+        t("process.design.activity4"),
+        t("process.design.activity5"),
       ],
       deliverables: [
-        "Complete UI/UX designs",
-        "Interactive prototypes",
-        "Design system and style guide",
-        "User testing results",
-        "Final design specifications",
+        t("process.design.deliverable1"),
+        t("process.design.deliverable2"),
+        t("process.design.deliverable3"),
+        t("process.design.deliverable4"),
+        t("process.design.deliverable5"),
       ],
     },
     {
       id: "development",
-      title: "Development & Integration",
-      duration: "4-12 weeks",
+      title: t("process.development.title"),
+      duration: t("process.development.duration"),
       icon: <Code className="w-6 h-6" />,
       color: "text-green-500",
       bgColor: "bg-green-500/10",
       borderColor: "border-green-500/20",
-      description: "Building your solution with clean, scalable code and modern technologies.",
+      description: t("process.development.description"),
       activities: [
-        "Frontend and backend development",
-        "Database design and implementation",
-        "API development and third-party integrations",
-        "Security implementation and data protection",
-        "Performance optimization and scalability planning",
+        t("process.development.activity1"),
+        t("process.development.activity2"),
+        t("process.development.activity3"),
+        t("process.development.activity4"),
+        t("process.development.activity5"),
       ],
       deliverables: [
-        "Fully functional application",
-        "Clean, documented codebase",
-        "API documentation",
-        "Security audit report",
-        "Performance benchmarks",
+        t("process.development.deliverable1"),
+        t("process.development.deliverable2"),
+        t("process.development.deliverable3"),
+        t("process.development.deliverable4"),
+        t("process.development.deliverable5"),
       ],
     },
     {
       id: "testing",
-      title: "Testing & Quality Assurance",
-      duration: "1-2 weeks",
+      title: t("process.testing.title"),
+      duration: t("process.testing.duration"),
       icon: <TestTube className="w-6 h-6" />,
       color: "text-orange-500",
       bgColor: "bg-orange-500/10",
       borderColor: "border-orange-500/20",
-      description: "Rigorous testing to ensure your solution works flawlessly across all scenarios.",
+      description: t("process.testing.description"),
       activities: [
-        "Automated testing suite development",
-        "Manual testing across devices and browsers",
-        "Performance and load testing",
-        "Security penetration testing",
-        "User acceptance testing (UAT)",
+        t("process.testing.activity1"),
+        t("process.testing.activity2"),
+        t("process.testing.activity3"),
+        t("process.testing.activity4"),
+        t("process.testing.activity5"),
       ],
       deliverables: [
-        "Comprehensive test suite",
-        "Testing reports and bug fixes",
-        "Performance optimization results",
-        "Security assessment report",
-        "UAT sign-off documentation",
+        t("process.testing.deliverable1"),
+        t("process.testing.deliverable2"),
+        t("process.testing.deliverable3"),
+        t("process.testing.deliverable4"),
+        t("process.testing.deliverable5"),
       ],
     },
     {
       id: "deployment",
-      title: "Deployment & Launch",
-      duration: "1 week",
+      title: t("process.deployment.title"),
+      duration: t("process.deployment.duration"),
       icon: <Rocket className="w-6 h-6" />,
       color: "text-red-500",
       bgColor: "bg-red-500/10",
       borderColor: "border-red-500/20",
-      description: "Seamless deployment to production with monitoring and optimization.",
+      description: t("process.deployment.description"),
       activities: [
-        "Production environment setup and configuration",
-        "Deployment automation and CI/CD pipeline",
-        "Monitoring and alerting system setup",
-        "Performance monitoring and optimization",
-        "Go-live support and issue resolution",
+        t("process.deployment.activity1"),
+        t("process.deployment.activity2"),
+        t("process.deployment.activity3"),
+        t("process.deployment.activity4"),
+        t("process.deployment.activity5"),
       ],
       deliverables: [
-        "Live production system",
-        "Deployment documentation",
-        "Monitoring dashboards",
-        "Backup and recovery procedures",
-        "Launch success metrics",
+        t("process.deployment.deliverable1"),
+        t("process.deployment.deliverable2"),
+        t("process.deployment.deliverable3"),
+        t("process.deployment.deliverable4"),
+        t("process.deployment.deliverable5"),
       ],
     },
     {
       id: "support",
-      title: "Support & Maintenance",
-      duration: "Ongoing",
+      title: t("process.support.title"),
+      duration: t("process.support.duration"),
       icon: <LifeBuoy className="w-6 h-6" />,
       color: "text-primary",
       bgColor: "bg-primary/10",
       borderColor: "border-primary/20",
-      description: "Continuous support, updates, and enhancements to keep your solution running smoothly.",
+      description: t("process.support.description"),
       activities: [
-        "24/7 monitoring and incident response",
-        "Regular security updates and patches",
-        "Performance optimization and scaling",
-        "Feature enhancements and new development",
-        "Technical support and troubleshooting",
+        t("process.support.activity1"),
+        t("process.support.activity2"),
+        t("process.support.activity3"),
+        t("process.support.activity4"),
+        t("process.support.activity5"),
       ],
       deliverables: [
-        "Monthly performance reports",
-        "Security update notifications",
-        "Feature enhancement roadmap",
-        "Support ticket resolution",
-        "System health monitoring",
+        t("process.support.deliverable1"),
+        t("process.support.deliverable2"),
+        t("process.support.deliverable3"),
+        t("process.support.deliverable4"),
+        t("process.support.deliverable5"),
       ],
     },
   ]
 
   const methodologies = [
     {
-      title: "Agile Development",
-      description: "2-week sprints with regular demos and feedback",
+      title: t("process.agile.title"),
+      description: t("process.agile.description"),
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Faster delivery", "Regular feedback", "Flexible scope"],
+      benefits: [t("process.agile.benefit1"), t("process.agile.benefit2"), t("process.agile.benefit3")],
     },
     {
-      title: "DevOps Integration",
-      description: "Automated testing, deployment, and monitoring",
+      title: t("process.devops.title"),
+      description: t("process.devops.description"),
       icon: <Shield className="w-6 h-6" />,
-      benefits: ["Reliable deployments", "Quick issue resolution", "Scalable infrastructure"],
+      benefits: [t("process.devops.benefit1"), t("process.devops.benefit2"), t("process.devops.benefit3")],
     },
     {
-      title: "User-Centered Design",
-      description: "Design decisions based on user research and testing",
+      title: t("process.user_centered.title"),
+      description: t("process.user_centered.description"),
       icon: <Users className="w-6 h-6" />,
-      benefits: ["Better user experience", "Higher adoption", "Reduced support needs"],
+      benefits: [t("process.user_centered.benefit1"), t("process.user_centered.benefit2"), t("process.user_centered.benefit3")],
     },
     {
-      title: "Quality Assurance",
-      description: "Comprehensive testing at every stage",
+      title: t("process.quality_assurance.title"),
+      description: t("process.quality_assurance.description"),
       icon: <CheckCircle className="w-6 h-6" />,
-      benefits: ["Bug-free releases", "Performance optimization", "Security compliance"],
+      benefits: [t("process.quality_assurance.benefit1"), t("process.quality_assurance.benefit2"), t("process.quality_assurance.benefit3")],
     },
   ]
 
   const tools = [
     {
-      category: "Project Management",
+      category: t("process.tools.project_management"),
       tools: ["Jira", "Asana", "Linear", "Notion"],
       icon: <Target className="w-5 h-5" />,
     },
     {
-      category: "Design & Prototyping",
+      category: t("process.tools.design_prototyping"),
       tools: ["Figma", "Adobe Creative Suite", "Sketch", "InVision"],
       icon: <Lightbulb className="w-5 h-5" />,
     },
     {
-      category: "Development",
+      category: t("process.tools.development"),
       tools: ["VS Code", "GitHub", "Docker", "AWS/Vercel"],
       icon: <Code className="w-5 h-5" />,
     },
     {
-      category: "Testing & QA",
+      category: t("process.tools.testing_qa"),
       tools: ["Jest", "Cypress", "Selenium", "Postman"],
       icon: <TestTube className="w-5 h-5" />,
     },
     {
-      category: "Communication",
+      category: t("process.tools.communication"),
       tools: ["Slack", "Zoom", "Microsoft Teams", "Discord"],
       icon: <MessageCircle className="w-5 h-5" />,
     },
     {
-      category: "Documentation",
+      category: t("process.tools.documentation"),
       tools: ["GitBook", "Confluence", "Notion", "Markdown"],
       icon: <FileText className="w-5 h-5" />,
     },
@@ -238,30 +240,30 @@ export default function ProcessPage() {
 
   const metrics = [
     {
-      title: "On-Time Delivery",
+      title: t("process.metrics.on_time_delivery"),
       value: "98%",
-      description: "Projects delivered on schedule",
+      description: t("process.metrics.on_time_description"),
       icon: <Clock className="w-6 h-6" />,
       color: "text-green-500",
     },
     {
-      title: "Client Satisfaction",
+      title: t("process.metrics.client_satisfaction"),
       value: "4.9/5",
-      description: "Average client rating",
+      description: t("process.metrics.client_satisfaction_description"),
       icon: <Users className="w-6 h-6" />,
       color: "text-blue-500",
     },
     {
-      title: "Bug-Free Releases",
+      title: t("process.metrics.bug_free_releases"),
       value: "95%",
-      description: "Releases without critical bugs",
+      description: t("process.metrics.bug_free_description"),
       icon: <CheckCircle className="w-6 h-6" />,
       color: "text-purple-500",
     },
     {
-      title: "Performance Improvement",
+      title: t("process.metrics.performance_improvement"),
       value: "40%",
-      description: "Average performance gain",
+      description: t("process.metrics.performance_description"),
       icon: <TrendingUp className="w-6 h-6" />,
       color: "text-orange-500",
     },
@@ -284,11 +286,10 @@ export default function ProcessPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-primary">Development Process</span>
+              {t("process.page_title").split(" ").slice(0, 1).join(" ")} <span className="text-primary">{t("process.page_title").split(" ").slice(1).join(" ")}</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A proven methodology that delivers exceptional results through careful planning, expert execution, and
-              continuous collaboration.
+              {t("process.page_subtitle")}
             </p>
           </motion.div>
 
@@ -299,7 +300,7 @@ export default function ProcessPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-center">Our 6-Step Process</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">{t("process.six_step_process")}</h2>
 
             {/* Step Navigation */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -330,7 +331,7 @@ export default function ProcessPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">{processSteps[activeStep].title}</h3>
-                  <p className="text-muted-foreground">Duration: {processSteps[activeStep].duration}</p>
+                  <p className="text-muted-foreground">{t("process.duration_label")} {processSteps[activeStep].duration}</p>
                 </div>
               </div>
 
@@ -340,7 +341,7 @@ export default function ProcessPage() {
                 <div>
                   <h4 className="font-semibold mb-4 flex items-center">
                     <Play className="w-4 h-4 mr-2 text-primary" />
-                    Key Activities
+                    {t("process.key_activities")}
                   </h4>
                   <ul className="space-y-2">
                     {processSteps[activeStep].activities.map((activity, index) => (
@@ -355,7 +356,7 @@ export default function ProcessPage() {
                 <div>
                   <h4 className="font-semibold mb-4 flex items-center">
                     <FileText className="w-4 h-4 mr-2 text-primary" />
-                    Deliverables
+                    {t("process.deliverables")}
                   </h4>
                   <ul className="space-y-2">
                     {processSteps[activeStep].deliverables.map((deliverable, index) => (
@@ -377,7 +378,7 @@ export default function ProcessPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-center">Our Methodologies</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">{t("process.methodologies_title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {methodologies.map((methodology, index) => (
                 <div
@@ -409,7 +410,7 @@ export default function ProcessPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-center">Tools & Technologies</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">{t("process.tools_title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {tools.map((toolCategory, index) => (
                 <div key={index} className="bg-background/80 backdrop-blur-sm border border-border rounded-xl p-6">
@@ -441,7 +442,7 @@ export default function ProcessPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-center">Our Track Record</h2>
+            <h2 className="text-2xl font-bold mb-8 text-center">{t("process.track_record_title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {metrics.map((metric, index) => (
                 <div
@@ -466,10 +467,9 @@ export default function ProcessPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("process.ready_to_start")}</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Let's discuss how our proven process can help bring your vision to life. Schedule a free consultation to
-              get started.
+              {t("process.ready_description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -477,13 +477,13 @@ export default function ProcessPage() {
                 className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium"
               >
                 <Calendar className="w-4 h-4 mr-2" />
-                Schedule Free Consultation
+                {t("process.schedule_consultation")}
               </a>
               <a
                 href="/portfolio"
                 className="inline-flex items-center px-6 py-3 bg-background border border-border text-foreground rounded-lg hover:border-primary/50 transition-all duration-300 font-medium"
               >
-                View Our Work
+                {t("process.view_our_work")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>

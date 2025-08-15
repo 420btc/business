@@ -149,14 +149,14 @@ export function ExpertiseSection(): ReactElement {
 
                   <ViewportTriggered45Percent />
 
-                  <p className="text-muted-foreground">of clients recommend us to other clients</p>
+                  <p className="text-muted-foreground">{t("expertise.recommend_text")}</p>
 
                   {/* Enhanced testimonial section */}
                   <div className="pt-2 pb-4">
                     <div className="flex items-start space-x-2">
                       <ThumbsUp className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                       <p className="text-xs text-muted-foreground italic">
-                        "Their expertise in web development and business systems transformed our operations completely."
+                        "{t("expertise.testimonial")}"
                       </p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export function ExpertiseSection(): ReactElement {
                       className="px-3 py-1.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full text-primary text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <Award className="w-3 h-3" />
-                      <span className="font-medium">Client Satisfaction</span>
+                      <span className="font-medium">{t("expertise.client_satisfaction")}</span>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
@@ -183,7 +183,7 @@ export function ExpertiseSection(): ReactElement {
                       className="px-3 py-1.5 bg-gradient-to-r from-gray-500/10 to-gray-500/5 border border-gray-500/20 rounded-full text-gray-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <Users className="w-3 h-3" />
-                      <span className="font-medium">B2B Partners</span>
+                      <span className="font-medium">{t("expertise.b2b_partners")}</span>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
@@ -192,7 +192,7 @@ export function ExpertiseSection(): ReactElement {
                       className="px-3 py-1.5 bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-full text-emerald-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <TrendingUp className="w-3 h-3" />
-                      <span className="font-medium">Growth Rate</span>
+                      <span className="font-medium">{t("expertise.growth_rate")}</span>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
@@ -201,7 +201,7 @@ export function ExpertiseSection(): ReactElement {
                       className="px-3 py-1.5 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-full text-amber-400 text-xs flex items-center space-x-1 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <Zap className="w-3 h-3" />
-                      <span className="font-medium">Innovation</span>
+                      <span className="font-medium">{t("expertise.innovation")}</span>
                     </motion.div>
                   </div>
                 </div>
@@ -244,11 +244,11 @@ export function ExpertiseSection(): ReactElement {
 
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-white">
-                      $2M raised: the strategy behind Glass Patch's growth
+                      {t("expertise.glasspatch_title")}
                     </h3>
                     <button className="text-primary flex items-center text-sm group-hover:underline">
                       <ChevronRight className="w-4 h-4 mr-1" />
-                      See case study
+                      {t("expertise.see_case_study")}
                     </button>
                   </div>
                 </div>
@@ -263,17 +263,16 @@ export function ExpertiseSection(): ReactElement {
               <div className="h-full rounded-lg border border-gray-600 bg-black p-6 hover:border-primary/50 transition-all duration-300">
                 <div className="space-y-6">
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-white">A streamlined process, executed with methodical care.</h3>
+                    <h3 className="text-2xl font-bold text-white">{t("expertise.streamlined_process")}</h3>
                     <p className="text-muted-foreground">
-                      We transform overwhelming brands into standout experiences, built to reflect the quality,
-                      ambition, and greatness
+                      {t("expertise.transform_brands")}
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <div className="space-y-1">
-                      <p className="text-sm text-muted-foreground">Timeline</p>
-                      <p className="text-sm text-white">Website & branding for Sony</p>
+                      <p className="text-sm text-muted-foreground">{t("expertise.timeline")}</p>
+                      <p className="text-sm text-white">{t("expertise.sony_project")}</p>
                     </div>
 
                     <AnimatedTimelineChart />
@@ -282,7 +281,7 @@ export function ExpertiseSection(): ReactElement {
                   <div className="pt-4">
                     <button className="text-primary flex items-center text-sm group-hover:underline">
                       <ChevronRight className="w-4 h-4 mr-1" />
-                      Learn about our process
+                      {t("expertise.learn_process")}
                     </button>
                   </div>
                 </div>
@@ -299,14 +298,11 @@ export function ExpertiseSection(): ReactElement {
                 <div className="space-y-4">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                     <div>
-                      <p className="text-sm text-muted-foreground">Fact 02</p>
+                      <p className="text-sm text-muted-foreground">{t("expertise.fact_02")}</p>
                       <ViewportTriggeredCountUp />
-                      <p className="text-muted-foreground">Raised by the brands we've partnered with</p>
+                      <p className="text-muted-foreground">{t("expertise.raised_amount")}</p>
                     </div>
-                    <div className="flex items-center space-x-2 px-3 py-2 bg-background/50 backdrop-blur-sm border border-border/30 rounded-full self-start lg:self-center">
-                      <span className="text-xs text-muted-foreground">powered by</span>
-                      <img src="/images/weltivation-logo.png" alt="Weltivation" className="h-6" />
-                    </div>
+
                   </div>
 
                   <div className="pt-6 h-[350px] relative">
@@ -323,6 +319,7 @@ export function ExpertiseSection(): ReactElement {
 }
 
 function ViewportTriggered45Percent(): ReactElement {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
   const [count, setCount] = useState(0)
@@ -351,11 +348,11 @@ function ViewportTriggered45Percent(): ReactElement {
       <div className="flex flex-wrap gap-4 mt-2">
         <div className="flex items-center space-x-1">
           <CheckCircle className="w-4 h-4 text-primary" />
-          <span className="text-sm">Verified</span>
+          <span className="text-sm">{t("expertise.verified")}</span>
         </div>
         <div className="flex items-center space-x-1">
           <Rocket className="w-4 h-4 text-primary" />
-          <span className="text-sm">+32% Growth</span>
+          <span className="text-sm">+32% {t("expertise.growth")}</span>
         </div>
       </div>
 
@@ -405,12 +402,13 @@ function ViewportTriggeredCountUp(): ReactElement {
 }
 
 function AnimatedTimelineChart(): ReactElement {
+  const { t } = useLanguage()
   const [activeStage, setActiveStage] = useState(0)
 
   const stages = [
-    { name: "Discovery", duration: "1 Week", position: 20, color: "#6b7280" },
-    { name: "Concept", duration: "2 Weeks", position: 50, color: "#6b7280" },
-    { name: "Execution", duration: "3 Weeks", position: 80, color: "#6b7280" },
+    { name: t("expertise.discovery"), duration: `1 ${t("expertise.week")}`, position: 20, color: "#6b7280" },
+    { name: t("expertise.concept"), duration: `2 ${t("expertise.weeks")}`, position: 50, color: "#6b7280" },
+    { name: t("expertise.execution"), duration: `3 ${t("expertise.weeks")}`, position: 80, color: "#6b7280" },
   ]
 
   useEffect(() => {
@@ -683,6 +681,7 @@ function CompanyLogoTicker(): ReactElement {
 }
 
 function ServiceSelectionCard(): ReactElement {
+  const { t } = useLanguage()
   const [selectedService, setSelectedService] = useState<string | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
@@ -691,7 +690,7 @@ function ServiceSelectionCard(): ReactElement {
   const services = [
     {
       id: "mechanical",
-      name: "Mechanical",
+      name: t("expertise.mechanical"),
       icon: <Cog className="w-6 h-6" />,
       color: "from-orange-500 to-orange-600",
       hoverColor: "from-orange-400 to-orange-500",
@@ -700,7 +699,7 @@ function ServiceSelectionCard(): ReactElement {
     },
     {
       id: "digital",
-      name: "Digital Systems",
+      name: t("expertise.digital_systems"),
       icon: <Laptop className="w-6 h-6" />,
       color: "from-blue-500 to-blue-600",
       hoverColor: "from-blue-400 to-blue-500",
@@ -709,7 +708,7 @@ function ServiceSelectionCard(): ReactElement {
     },
     {
       id: "website",
-      name: "Website",
+      name: t("expertise.website"),
       icon: <Globe className="w-6 h-6" />,
       color: "from-green-500 to-green-600",
       hoverColor: "from-green-400 to-green-500",
@@ -718,7 +717,7 @@ function ServiceSelectionCard(): ReactElement {
     },
     {
       id: "mobile",
-      name: "Mobile App",
+      name: t("expertise.mobile_app"),
       icon: <Smartphone className="w-6 h-6" />,
       color: "from-purple-500 to-purple-600",
       hoverColor: "from-purple-400 to-purple-500",
@@ -727,7 +726,7 @@ function ServiceSelectionCard(): ReactElement {
     },
     {
       id: "product",
-      name: "Product Dev",
+      name: t("expertise.product_dev"),
       icon: <Package className="w-6 h-6" />,
       color: "from-red-500 to-red-600",
       hoverColor: "from-red-400 to-red-500",
@@ -736,7 +735,7 @@ function ServiceSelectionCard(): ReactElement {
     },
     {
       id: "architecture",
-      name: "Architecture Design",
+      name: t("expertise.architecture_design"),
       icon: <Building2 className="w-6 h-6" />,
       color: "from-cyan-500 to-cyan-600",
       hoverColor: "from-cyan-400 to-cyan-500",
@@ -748,51 +747,51 @@ function ServiceSelectionCard(): ReactElement {
   const questions = [
     {
       id: "businessName",
-      question: "What's your business name?",
+      question: t("form.business_name"),
       type: "input",
-      placeholder: "Enter your business name",
+      placeholder: t("form.business_name_placeholder"),
     },
     {
       id: "businessType",
-      question: "What type of business do you have?",
-      options: ["Startup", "Small Business", "Enterprise", "Non-Profit"],
+      question: t("form.business_type"),
+      options: [t("form.startup"), t("form.small_business"), t("form.enterprise"), t("form.non_profit")],
     },
     {
       id: "companySize",
-      question: "How many employees does your company have?",
+      question: t("form.company_size"),
       options: ["1-10", "11-50", "51-200", "201+"],
     },
     {
       id: "goal",
-      question: "What's your primary goal?",
-      options: ["Increase Revenue", "Improve Efficiency", "Scale Operations", "Digital Transformation"],
+      question: t("form.goal"),
+      options: [t("form.increase_revenue"), t("form.improve_efficiency"), t("form.scale_operations"), t("form.digital_transformation")],
     },
     {
       id: "budget",
-      question: "What's your budget range?",
+      question: t("form.budget"),
       options: ["$1K-$5K", "$5K-$15K", "$15K-$50K", "$50K+"],
     },
     {
       id: "timeline",
-      question: "What's your timeline?",
-      options: ["ASAP", "1-3 Months", "3-6 Months", "6+ Months"],
+      question: t("form.timeline"),
+      options: [t("form.asap"), t("form.1_3_months"), t("form.3_6_months"), t("form.6_plus_months")],
     },
     {
       id: "location",
-      question: "Where is your business located?",
-      options: ["North America", "Europe", "Asia", "Other"],
+      question: t("form.location"),
+      options: [t("form.north_america"), t("form.europe"), t("form.asia"), t("form.other")],
     },
     {
       id: "contactName",
-      question: "Who is the primary contact for this project?",
+      question: t("form.contact_name"),
       type: "input",
-      placeholder: "Enter your full name",
+      placeholder: t("form.contact_name_placeholder"),
     },
     {
       id: "email",
-      question: "What's the best email to reach you?",
+      question: t("form.email"),
       type: "input",
-      placeholder: "Enter your email address",
+      placeholder: t("form.email_placeholder"),
     },
   ]
 
@@ -883,14 +882,14 @@ Submitted at: ${new Date().toLocaleString()}
                 {selectedServiceData?.icon}
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{selectedServiceData?.name} Consultation</h3>
+                <h3 className="text-lg font-semibold">{selectedServiceData?.name} {t("form.consultation")}</h3>
                 <p className="text-sm text-gray-400">
-                  Step {currentQuestion + 1} of {questions.length}
+                  {t("form.step_of").replace("{current}", (currentQuestion + 1).toString()).replace("{total}", questions.length.toString())}
                 </p>
               </div>
             </div>
             <button onClick={handleBack} className="flex items-center text-gray-400 hover:text-white text-sm">
-              ← Back
+              ← {t("form.back")}
             </button>
           </div>
         </div>
@@ -912,7 +911,7 @@ Submitted at: ${new Date().toLocaleString()}
                 type="submit"
                 className="w-full p-3 bg-green-500 text-black font-medium rounded-lg hover:bg-green-400 transition-colors"
               >
-                Continue
+                {t("form.continue")}
               </button>
             </form>
           ) : (
@@ -930,7 +929,7 @@ Submitted at: ${new Date().toLocaleString()}
           )}
 
           <div className="mt-6 text-center">
-            <p className="text-gray-400 text-sm">{questions.length - currentQuestion - 1} questions remaining</p>
+            <p className="text-gray-400 text-sm">{t("form.questions_remaining").replace("{count}", (questions.length - currentQuestion - 1).toString())}</p>
           </div>
         </div>
       </div>
@@ -944,17 +943,16 @@ Submitted at: ${new Date().toLocaleString()}
           <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto">
             <div className="w-8 h-8 bg-green-500 rounded-full" />
           </div>
-          <h3 className="text-xl font-bold">Thank you!</h3>
+          <h3 className="text-xl font-bold">{t("form.thank_you")}</h3>
           <p className="text-gray-400 text-sm">
-            Your inquiry has been sent to our team. We'll get back to you within 24 hours with a customized
-            consultation.
+            {t("form.inquiry_sent")}
           </p>
           <div className="pt-4">
             <button
               onClick={() => (window.location.href = "/consultation")}
               className="px-4 py-2 bg-green-500 text-black rounded-lg hover:bg-green-400 transition-colors text-sm font-medium"
             >
-              Schedule Consultation
+              {t("form.schedule_consultation")}
             </button>
           </div>
           <button
@@ -966,7 +964,7 @@ Submitted at: ${new Date().toLocaleString()}
             }}
             className="mt-4 text-sm text-gray-400 hover:text-white"
           >
-            Start Another Consultation
+            {t("form.start_another")}
           </button>
         </div>
       </div>
@@ -977,8 +975,8 @@ Submitted at: ${new Date().toLocaleString()}
     <div className="h-full rounded-lg border border-gray-600 bg-black p-6 hover:border-primary/50 transition-all duration-300">
       <div className="space-y-4">
         <div>
-          <h3 className="text-2xl font-bold mb-2 text-white">Select a Service</h3>
-          <p className="text-muted-foreground">Choose the service you're interested in to start a consultation</p>
+          <h3 className="text-2xl font-bold mb-2 text-white">{t("expertise.select_service")}</h3>
+          <p className="text-muted-foreground">{t("expertise.choose_service")}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
