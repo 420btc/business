@@ -57,7 +57,8 @@ export default function DashboardPage() {
     },
   ]
   return (
-    <div className="container relative">
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="container relative">
       <header className="flex items-center justify-between py-10">
         <Link href="#" className="flex items-center space-x-2">
           <Icons.logo className="h-6 w-6" />
@@ -65,12 +66,16 @@ export default function DashboardPage() {
         </Link>
         <div className="flex items-center space-x-2">
           <ModeToggle />
-          <Link href="/login" className={cn(Button, "bg-background hover:bg-secondary")}>
-            {t("dashboard.page.login")}
-          </Link>
-          <Link href="/sign-up" className={cn(Button, "bg-primary text-primary-foreground hover:bg-primary/90")}>
-            {t("dashboard.page.sign_up")}
-          </Link>
+          <Button variant="outline" asChild>
+            <Link href="/login">
+              {t("dashboard.page.login")}
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link href="/sign-up">
+              {t("dashboard.page.sign_up")}
+            </Link>
+          </Button>
         </div>
       </header>
       <section className="py-12 md:py-24 lg:py-32">
@@ -103,11 +108,14 @@ export default function DashboardPage() {
               </Button>
             </div>
           </div>
-          <img
-            src="/hero-image.png"
-            alt="Hero Image"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-          />
+          <div className="mx-auto aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 border border-emerald-500/30 flex items-center justify-center sm:w-full">
+            <div className="text-center space-y-4">
+              <div className="w-20 h-20 bg-emerald-500/30 rounded-full flex items-center justify-center mx-auto">
+                <GraduationCap className="w-10 h-10 text-emerald-400" />
+              </div>
+              <div className="text-emerald-400 font-semibold">Dashboard Preview</div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="py-12 md:py-24 lg:py-32">
@@ -170,11 +178,14 @@ export default function DashboardPage() {
       <section className="py-12 md:py-24 lg:py-32">
         <div className="container">
           <div className="grid items-center gap-6 lg:grid-cols-2">
-            <img
-              src="/cta-image.png"
-              alt="CTA Image"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            <div className="mx-auto aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/30 flex items-center justify-center sm:w-full">
+              <div className="text-center space-y-4">
+                <div className="w-20 h-20 bg-blue-500/30 rounded-full flex items-center justify-center mx-auto">
+                  <Zap className="w-10 h-10 text-blue-400" />
+                </div>
+                <div className="text-blue-400 font-semibold">Get Started Today</div>
+              </div>
+            </div>
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{t("dashboard.cta.title")}</h2>
@@ -206,6 +217,7 @@ export default function DashboardPage() {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   )
 }

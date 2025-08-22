@@ -48,7 +48,7 @@ export function NavBar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={scrollToTop}>
-            <div className="text-2xl font-bold text-white">Wolty</div>
+            <div className="text-2xl font-black text-white tracking-tight bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-green-400 transition-all duration-300">Wolty</div>
           </Link>
 
           {/* Desktop Navigation */}
