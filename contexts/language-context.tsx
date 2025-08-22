@@ -38,7 +38,7 @@ const translations = {
     "hero.subtitle": "Digital Technology & Mechanical Engineering",
     "hero.description":
       "Innovative solutions at the intersection of digital technology and mechanical engineering excellence.",
-    "hero.typing_text": "Let's create tomorrow's technology",
+    "hero.typing_text": "We create the:",
 
 
 
@@ -66,9 +66,9 @@ const translations = {
     "home.steps.no_commitment": "No commitment required",
     "home.steps.strategy_session": "30-minute strategy session",
     "home.steps.expert_guidance": "Expert guidance",
-    "typing.technology": "technology",
-    "typing.digital_solutions": "digital solutions",
-    "typing.free_consultation": "free consultation",
+    "typing.technology": "tecnología",
+     "typing.digital_solutions": "soluciones digitales",
+     "typing.free_consultation": "consulta gratuita",
     "typing.base_text": "Let's create tomorrow's ",
     
     // Expertise Section
@@ -684,7 +684,7 @@ const translations = {
     "hero.subtitle": "Tecnología Digital e Ingeniería Mecánica",
     "hero.description":
       "Soluciones innovadoras en la intersección de la tecnología digital y la excelencia en ingeniería mecánica.",
-    "hero.typing_text": "Creemos la tecnología del mañana",
+    "hero.typing_text": "Creamos la:",
 
 
 
@@ -713,9 +713,9 @@ const translations = {
     "home.steps.strategy_session": "Sesión de estrategia de 30 minutos",
     "home.steps.expert_guidance": "Orientación experta",
     "typing.technology": "tecnología",
-    "typing.digital_solutions": "soluciones digitales",
-    "typing.free_consultation": "consulta gratuita",
-    "typing.base_text": "Creemos la ",
+     "typing.digital_solutions": "soluciones digitales",
+     "typing.free_consultation": "consulta gratuita",
+    "typing.base_text": "Creamos la ",
     
     // Expertise Section
     "expertise.trusted_by": "Confiado por líderes de la industria",
