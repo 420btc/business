@@ -101,7 +101,7 @@ export function ExpertiseSection(): ReactElement {
             <motion.div variants={itemVariants} className="lg:col-span-8 space-y-6">
               <div className="space-y-2">
                 <div className="flex items-center space-x-3">
-                  <h2 className="text-2xl font-bold text-white">WELTIVATION™</h2>
+                  <h2 className="text-2xl font-bold text-white">WOLTY™</h2>
                   <motion.div
                     className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-xs font-bold"
                     animate={{ scale: [1, 1.1, 1] }}
@@ -489,8 +489,8 @@ function CompanyLogoTicker(): ReactElement {
       >
         <div className="h-5 w-auto">
           <img
-            src="/images/weltivation-logo.png"
-            alt="Weltivation"
+            src="/images/wolty-logo.png"
+                  alt="Wolty"
             className="h-5 w-auto object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>
@@ -531,8 +531,8 @@ function CompanyLogoTicker(): ReactElement {
         </div>
         <div className="h-5 w-auto">
           <img
-            src="/images/weltivation-logo.png"
-            alt="Weltivation"
+            src="/images/wolty-logo.png"
+                    alt="Wolty"
             className="h-5 w-auto object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>
@@ -547,8 +547,8 @@ function CompanyLogoTicker(): ReactElement {
         {/* Duplicate set for seamless looping */}
         <div className="h-5 w-auto">
           <img
-            src="/images/weltivation-logo.png"
-            alt="Weltivation"
+            src="/images/wolty-logo.png"
+                      alt="Wolty"
             className="h-5 w-auto object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>
@@ -612,8 +612,8 @@ function CompanyLogoTicker(): ReactElement {
         </div>
         <div className="h-5 w-auto">
           <img
-            src="/images/weltivation-logo.png"
-            alt="Weltivation"
+            src="/images/wolty-logo.png"
+                        alt="Wolty"
             className="h-5 w-auto object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>
@@ -670,8 +670,8 @@ function CompanyLogoTicker(): ReactElement {
         </div>
         <div className="h-5 w-auto">
           <img
-            src="/images/weltivation-logo.png"
-            alt="Weltivation"
+            src="/images/wolty-logo.png"
+                          alt="Wolty"
             className="h-5 w-auto object-contain filter grayscale opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>

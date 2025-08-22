@@ -13,5 +13,5 @@ export function TextLogo({ className = "", size = "md" }: TextLogoProps) {
     xl: "text-4xl sm:text-5xl font-bold leading-tight",
   }
 
-  return <div className={`font-bold leading-tight text-white ${sizeClasses[size]} ${className}`}>Welitvation</div>
+  return <div className={`font-bold leading-tight text-white ${sizeClasses[size]} ${className}`}>Wolty</div>
 }

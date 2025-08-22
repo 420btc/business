@@ -87,7 +87,7 @@ export function PoweredByBadge() {
                 {/* Header with large logo */}
                 <div className="text-center space-y-4 pt-8">
                   <div className="flex justify-center">
-                    <div className="text-3xl font-bold text-white">Welitvation</div>
+                    <div className="text-3xl font-bold text-white">Wolty</div>
                   </div>
                   <h2 className="text-2xl font-bold text-white">Partnership Program</h2>
                   <p className="text-gray-400">Exclusive benefits for our valued partners</p>

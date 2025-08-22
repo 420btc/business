@@ -48,7 +48,7 @@ const translations = {
       "Let's discuss how we can bring your vision to life with cutting-edge technology and engineering excellence.",
 
     // Footer
-    "footer.powered_by": "Powered by Weltivation",
+    "footer.powered_by": "Powered by Wolty",
     "footer.rights": "All rights reserved",
 
     // Process Steps
@@ -694,7 +694,7 @@ const translations = {
       "Hablemos sobre cómo podemos dar vida a su visión con tecnología de vanguardia y excelencia en ingeniería.",
 
     // Footer
-    "footer.powered_by": "Desarrollado por Weltivation",
+    "footer.powered_by": "Desarrollado por Wolty",
     "footer.rights": "Todos los derechos reservados",
 
     // Process Steps
@@ -1340,7 +1340,7 @@ const translations = {
       "Discutons de la façon dont nous pouvons donner vie à votre vision avec une technologie de pointe et une excellence en ingénierie.",
 
     // Footer
-    "footer.powered_by": "Propulsé par Weltivation",
+    "footer.powered_by": "Propulsé par Wolty",
     "footer.rights": "Tous droits réservés",
 
     // Process Steps
@@ -1384,7 +1384,7 @@ const translations = {
       "Lassen Sie uns besprechen, wie wir Ihre Vision mit modernster Technologie und technischer Exzellenz zum Leben erwecken können.",
 
     // Footer
-    "footer.powered_by": "Betrieben von Weltivation",
+    "footer.powered_by": "Betrieben von Wolty",
     "footer.rights": "Alle Rechte vorbehalten",
 
     // Process Steps
@@ -1426,7 +1426,7 @@ const translations = {
     "contact.description": "让我们讨论如何用尖端技术和工程卓越将您的愿景变为现实。",
 
     // Footer
-    "footer.powered_by": "由Weltivation提供支持",
+    "footer.powered_by": "由Wolty提供支持",
     "footer.rights": "版权所有",
 
     // Process Steps
@@ -1468,7 +1468,7 @@ const translations = {
     "contact.description": "最先端技術と工学的卓越性でお客様のビジョンを実現する方法について話し合いましょう。",
 
     // Footer
-    "footer.powered_by": "Weltivationによって提供",
+    "footer.powered_by": "Woltyによって提供",
     "footer.rights": "全著作権所有",
 
     // Process Steps

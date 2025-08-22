@@ -74,7 +74,7 @@ export default function PartnershipPage() {
                 <div className="flex flex-col items-center space-y-6">
                   <div className="flex items-center space-x-4">
                     <span className="text-3xl text-gray-300 font-light">{t("partnership.powered_by")}</span>
-                    <span className="text-4xl font-bold text-white">Carlos Freire</span>
+                    <span className="text-4xl font-bold text-white">Wolty</span>
                   </div>
                   <div className="text-center">
                     <p className="text-gray-400 text-xl mb-2">{t("partnership.keep_badge_unlock")}</p>

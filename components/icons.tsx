@@ -23,11 +23,11 @@ export const Icons = {
   spinner: (props: React.SVGProps<SVGSVGElement>) => (
     <Loader2 {...props} className={`animate-spin ${props.className ?? ""}`} />
   ),
-  /** Weltivation logo – adjust width/height with Tailwind classes */
+  /** Wolty logo – adjust width/height with Tailwind classes */
   logo: ({ className, ...rest }: Omit<React.ComponentProps<typeof Image>, "src" | "alt">) => (
     <Image
-      src="/images/weltivation-logo.png"
-      alt="Weltivation"
+      src="/images/wolty-logo.png"
+      alt="Wolty"
       width={24}
       height={24}
       className={className}

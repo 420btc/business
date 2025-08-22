@@ -68,13 +68,13 @@ export function Footer() {
         {/* Desktop Footer */}
         <div className="hidden md:flex flex-col sm:flex-row justify-between items-center gap-8">
           <div className="flex items-center space-x-4">
-            <div className="text-2xl font-bold text-white">Welitvation</div>
+            <div className="text-2xl font-bold text-white">Wolty</div>
             <FooterPopup />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <div className="text-muted-foreground text-xs">
-              &copy; {new Date().getFullYear()} Welitvation. All rights reserved.
+              &copy; {new Date().getFullYear()} Wolty. All rights reserved.
             </div>
 
             <div className="flex items-center gap-4">
@@ -107,9 +107,9 @@ export function Footer() {
         <div className="md:hidden space-y-6">
           {/* Logo and main info */}
           <div className="text-center space-y-4">
-              <div className="text-2xl font-bold text-white mx-auto">Welitvation</div>
+              <div className="text-2xl font-bold text-white mx-auto">Wolty</div>
               <div className="text-muted-foreground text-xs">
-                &copy; {new Date().getFullYear()} Welitvation. All rights reserved.
+                &copy; {new Date().getFullYear()} Wolty. All rights reserved.
               </div>
               <a 
                 href="https://www.carlosfr.es" 
