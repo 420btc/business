@@ -47,7 +47,7 @@ export function PoweredByBadge() {
           onClick={handleClick}
         >
           <span className="text-xs ml-1 mr-1">powered by</span>
-          <span className="text-sm font-bold text-white">Carlos Freire</span>
+          <img src="/logo.svg" alt="Logo" className="h-4 w-auto ml-1" />
         </motion.div>
       </div>
 
