@@ -11,7 +11,12 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Wolty - Transform Your Business",
   description: "Revolutionary technology solutions that drive growth and innovation",
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: '/logofavi.png',
+    shortcut: '/logofavi.png',
+    apple: '/logofavi.png',
+  },
 }
 
 export default function RootLayout({
